@@ -1,0 +1,13 @@
+# Target labels
+ generate_translations_header
+# Source files and their labels
+/home/saargo/quorax/build/Linux/master/release/CMakeFiles/generate_translations_header
+/home/saargo/quorax/build/Linux/master/release/CMakeFiles/generate_translations_header.rule
+/home/saargo/quorax/build/Linux/master/release/CMakeFiles/generate_translations_header-complete.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-install.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-mkdir.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-download.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-update.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-patch.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-configure.rule
+/home/saargo/quorax/build/Linux/master/release/generate_translations_header-prefix/src/generate_translations_header-stamp/generate_translations_header-build.rule

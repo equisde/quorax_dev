@@ -1,0 +1,914 @@
+The system is: Linux - 4.4.0-142-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/saargo/quorax/build/Linux/master/release/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/saargo/quorax/build/Linux/master/release/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_13b5e/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_13b5e.dir/build.make CMakeFiles/cmTC_13b5e.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_13b5e.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_13b5e.dir/testCCompiler.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_13b5e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13b5e.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_13b5e.dir/testCCompiler.c.o  -o cmTC_13b5e -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a5299/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a5299.dir/build.make CMakeFiles/cmTC_a5299.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a5299
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5299.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o  -o cmTC_a5299 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a5299' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjb0Q21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a5299 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a5299/fast"]
+  ignore line: [make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a5299.dir/build.make CMakeFiles/cmTC_a5299.dir/build]
+  ignore line: [make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a5299]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5299.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o  -o cmTC_a5299 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a5299' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjb0Q21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a5299 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccjb0Q21.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a5299] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_a5299.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b7477/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b7477.dir/build.make CMakeFiles/cmTC_b7477.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7477.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_b7477.dir/feature_tests.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b7477
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7477.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b7477.dir/feature_tests.c.o  -o cmTC_b7477 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1564d/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1564d.dir/build.make CMakeFiles/cmTC_1564d.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1564d.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_1564d.dir/feature_tests.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/feature_tests.c
+Linking C executable cmTC_1564d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1564d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1564d.dir/feature_tests.c.o  -o cmTC_1564d -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aa66f/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_aa66f.dir/build.make CMakeFiles/cmTC_aa66f.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa66f.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_aa66f.dir/feature_tests.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/feature_tests.c
+Linking C executable cmTC_aa66f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa66f.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_aa66f.dir/feature_tests.c.o  -o cmTC_aa66f -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ca555/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ca555.dir/build.make CMakeFiles/cmTC_ca555.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ca555.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_ca555.dir/testCXXCompiler.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_ca555
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca555.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_ca555.dir/testCXXCompiler.cxx.o  -o cmTC_ca555 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1c7ff/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1c7ff.dir/build.make CMakeFiles/cmTC_1c7ff.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_1c7ff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c7ff.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1c7ff -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c7ff' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cchewt2m.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_1c7ff /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1c7ff/fast"]
+  ignore line: [make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1c7ff.dir/build.make CMakeFiles/cmTC_1c7ff.dir/build]
+  ignore line: [make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_1c7ff]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c7ff.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1c7ff -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c7ff' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cchewt2m.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_1c7ff /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cchewt2m.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_1c7ff] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_1c7ff.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_16ed8/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_16ed8.dir/build.make CMakeFiles/cmTC_16ed8.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_16ed8.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_16ed8.dir/feature_tests.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_16ed8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16ed8.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_16ed8.dir/feature_tests.cxx.o  -o cmTC_16ed8 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6a3d4/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6a3d4.dir/build.make CMakeFiles/cmTC_6a3d4.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6a3d4.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_6a3d4.dir/feature_tests.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6a3d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a3d4.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_6a3d4.dir/feature_tests.cxx.o  -o cmTC_6a3d4 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_62b29/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_62b29.dir/build.make CMakeFiles/cmTC_62b29.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_62b29.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_62b29.dir/feature_tests.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_62b29
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62b29.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_62b29.dir/feature_tests.cxx.o  -o cmTC_62b29 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fb195/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fb195.dir/build.make CMakeFiles/cmTC_fb195.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb195.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_fb195.dir/CheckIncludeFile.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fb195
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb195.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_fb195.dir/CheckIncludeFile.c.o  -o cmTC_fb195 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test _pthread_c succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_404fe/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_404fe.dir/build.make CMakeFiles/cmTC_404fe.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_404fe.dir/src.c.o
+/usr/bin/cc    -D_pthread_c   -pthread -o CMakeFiles/cmTC_404fe.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_404fe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_404fe.dir/link.txt --verbose=1
+/usr/bin/cc   -D_pthread_c    CMakeFiles/cmTC_404fe.dir/src.c.o  -o cmTC_404fe -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _pthread_cxx succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_692ab/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_692ab.dir/build.make CMakeFiles/cmTC_692ab.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_692ab.dir/src.cxx.o
+/usr/bin/c++     -D_pthread_cxx   -pthread -o CMakeFiles/cmTC_692ab.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_692ab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_692ab.dir/link.txt --verbose=1
+/usr/bin/c++    -D_pthread_cxx    CMakeFiles/cmTC_692ab.dir/src.cxx.o  -o cmTC_692ab -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the function strptime exists passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_09dc1/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_09dc1.dir/build.make CMakeFiles/cmTC_09dc1.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_09dc1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -pthread -DCHECK_FUNCTION_EXISTS=strptime   -o CMakeFiles/cmTC_09dc1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_09dc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09dc1.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=strptime    CMakeFiles/cmTC_09dc1.dir/CheckFunctionExists.c.o  -o cmTC_09dc1 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test CC_SUPPORTS_MARCH_NATIVE succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cfd80/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cfd80.dir/build.make CMakeFiles/cmTC_cfd80.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfd80.dir/src.c.o
+/usr/bin/cc    -pthread -DCC_SUPPORTS_MARCH_NATIVE   -march=native -o CMakeFiles/cmTC_cfd80.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cfd80
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfd80.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -DCC_SUPPORTS_MARCH_NATIVE    CMakeFiles/cmTC_cfd80.dir/src.c.o  -o cmTC_cfd80 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test _Wformat_c succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_31016/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_31016.dir/build.make CMakeFiles/cmTC_31016.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_31016.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_c   -Wformat -o CMakeFiles/cmTC_31016.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_31016
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31016.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_c    CMakeFiles/cmTC_31016.dir/src.c.o  -o cmTC_31016 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _Wformat_cxx succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_41cd9/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_41cd9.dir/build.make CMakeFiles/cmTC_41cd9.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_41cd9.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_cxx   -Wformat -o CMakeFiles/cmTC_41cd9.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_41cd9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41cd9.dir/link.txt --verbose=1
+/usr/bin/c++    -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_cxx    CMakeFiles/cmTC_41cd9.dir/src.cxx.o  -o cmTC_41cd9 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test _Wformat_security_c succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fbcdc/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fbcdc.dir/build.make CMakeFiles/cmTC_fbcdc.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fbcdc.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_security_c   -Wformat-security -o CMakeFiles/cmTC_fbcdc.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fbcdc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbcdc.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_security_c    CMakeFiles/cmTC_fbcdc.dir/src.c.o  -o cmTC_fbcdc -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _Wformat_security_cxx succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2105e/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_2105e.dir/build.make CMakeFiles/cmTC_2105e.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2105e.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_security_cxx   -Wformat-security -o CMakeFiles/cmTC_2105e.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2105e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2105e.dir/link.txt --verbose=1
+/usr/bin/c++    -pthread -maes -march=native -fno-strict-aliasing -D_Wformat_security_cxx    CMakeFiles/cmTC_2105e.dir/src.cxx.o  -o cmTC_2105e -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test _fstack_protector_c succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db113/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_db113.dir/build.make CMakeFiles/cmTC_db113.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db113.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_c   -fstack-protector -o CMakeFiles/cmTC_db113.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_db113
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db113.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_c    CMakeFiles/cmTC_db113.dir/src.c.o  -o cmTC_db113 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _fstack_protector_cxx succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_57348/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_57348.dir/build.make CMakeFiles/cmTC_57348.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_57348.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_cxx   -fstack-protector -o CMakeFiles/cmTC_57348.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_57348
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57348.dir/link.txt --verbose=1
+/usr/bin/c++    -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_cxx    CMakeFiles/cmTC_57348.dir/src.cxx.o  -o cmTC_57348 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test _fstack_protector_strong_c succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d135/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9d135.dir/build.make CMakeFiles/cmTC_9d135.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d135.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_strong_c   -fstack-protector-strong -o CMakeFiles/cmTC_9d135.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9d135
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d135.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_strong_c    CMakeFiles/cmTC_9d135.dir/src.c.o  -o cmTC_9d135 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _fstack_protector_strong_cxx succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_69c23/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_69c23.dir/build.make CMakeFiles/cmTC_69c23.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_69c23.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_strong_cxx   -fstack-protector-strong -o CMakeFiles/cmTC_69c23.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_69c23
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69c23.dir/link.txt --verbose=1
+/usr/bin/c++    -pthread -maes -march=native -fno-strict-aliasing -D_fstack_protector_strong_cxx    CMakeFiles/cmTC_69c23.dir/src.cxx.o  -o cmTC_69c23 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the -pie linker flag is supported passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a2f9e/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a2f9e.dir/build.make CMakeFiles/cmTC_a2f9e.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2f9e.dir/CheckLinkerFlag.c.o
+/usr/bin/cc    -pie    -pie -o CMakeFiles/cmTC_a2f9e.dir/CheckLinkerFlag.c.o   -c /home/saargo/quorax/cmake/CheckLinkerFlag.c
+Linking C executable cmTC_a2f9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2f9e.dir/link.txt --verbose=1
+/usr/bin/cc  -pie     CMakeFiles/cmTC_a2f9e.dir/CheckLinkerFlag.c.o  -o cmTC_a2f9e -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Determining if the -Wl,-z,relro linker flag is supported passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_03906/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_03906.dir/build.make CMakeFiles/cmTC_03906.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_03906.dir/CheckLinkerFlag.c.o
+/usr/bin/cc    -Wl,-z,relro    -Wl,-z,relro -o CMakeFiles/cmTC_03906.dir/CheckLinkerFlag.c.o   -c /home/saargo/quorax/cmake/CheckLinkerFlag.c
+Linking C executable cmTC_03906
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03906.dir/link.txt --verbose=1
+/usr/bin/cc  -Wl,-z,relro     CMakeFiles/cmTC_03906.dir/CheckLinkerFlag.c.o  -o cmTC_03906 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Determining if the -Wl,-z,now linker flag is supported passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a58f3/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a58f3.dir/build.make CMakeFiles/cmTC_a58f3.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a58f3.dir/CheckLinkerFlag.c.o
+/usr/bin/cc    -Wl,-z,now    -Wl,-z,now -o CMakeFiles/cmTC_a58f3.dir/CheckLinkerFlag.c.o   -c /home/saargo/quorax/cmake/CheckLinkerFlag.c
+Linking C executable cmTC_a58f3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a58f3.dir/link.txt --verbose=1
+/usr/bin/cc  -Wl,-z,now     CMakeFiles/cmTC_a58f3.dir/CheckLinkerFlag.c.o  -o cmTC_a58f3 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Determining if the -Wl,-z,noexecstack linker flag is supported passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_841c5/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_841c5.dir/build.make CMakeFiles/cmTC_841c5.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_841c5.dir/CheckLinkerFlag.c.o
+/usr/bin/cc    -Wl,-z,noexecstack    -Wl,-z,noexecstack -o CMakeFiles/cmTC_841c5.dir/CheckLinkerFlag.c.o   -c /home/saargo/quorax/cmake/CheckLinkerFlag.c
+Linking C executable cmTC_841c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_841c5.dir/link.txt --verbose=1
+/usr/bin/cc  -Wl,-z,noexecstack     CMakeFiles/cmTC_841c5.dir/CheckLinkerFlag.c.o  -o cmTC_841c5 -rdynamic 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Determining if the function rl_copy_text exists passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f2879/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f2879.dir/build.make CMakeFiles/cmTC_f2879.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2879.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -std=c11 -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-unused-variable -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes  -fPIC  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -Wformat -Wformat-security -fstack-protector -fstack-protector-strong -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_copy_text   -o CMakeFiles/cmTC_f2879.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_f2879
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2879.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -std=c11 -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-unused-variable -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes  -fPIC  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -Wformat -Wformat-security -fstack-protector -fstack-protector-strong -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_copy_text    CMakeFiles/cmTC_f2879.dir/CheckFunctionExists.c.o  -o cmTC_f2879 -rdynamic /usr/lib/x86_64-linux-gnu/libreadline.so 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Determining if the function rl_filename_completion_function exists passed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c9e54/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c9e54.dir/build.make CMakeFiles/cmTC_c9e54.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c9e54.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -std=c11 -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-unused-variable -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes  -fPIC  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -Wformat -Wformat-security -fstack-protector -fstack-protector-strong -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_filename_completion_function   -o CMakeFiles/cmTC_c9e54.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:6:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ char CHECK_FUNCTION_EXISTS();
+ ^
+Linking C executable cmTC_c9e54
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9e54.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -std=c11 -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-unused-variable -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes  -fPIC  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -Wformat -Wformat-security -fstack-protector -fstack-protector-strong -fno-strict-aliasing -DCHECK_FUNCTION_EXISTS=rl_filename_completion_function    CMakeFiles/cmTC_c9e54.dir/CheckFunctionExists.c.o  -o cmTC_c9e54 -rdynamic /usr/lib/x86_64-linux-gnu/libreadline.so 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_C11 succeeded with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8df3b/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8df3b.dir/build.make CMakeFiles/cmTC_8df3b.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8df3b.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -std=c11 -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-unused-variable -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes  -fPIC  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -Wformat -Wformat-security -fstack-protector -fstack-protector-strong -fno-strict-aliasing -DHAVE_C11   -std=c11 -o CMakeFiles/cmTC_8df3b.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8df3b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8df3b.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -maes -march=native -fno-strict-aliasing -std=c11 -D_GNU_SOURCE   -Wall -Wextra -Wpointer-arith -Wundef -Wvla -Wwrite-strings -Wno-error=extra -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-unused-variable -Wno-error=unused-variable -Wno-error=undef -Wno-error=uninitialized -Wlogical-op -Wno-error=maybe-uninitialized -Wno-error=cpp -Waggregate-return -Wnested-externs -Wold-style-definition -Wstrict-prototypes  -fPIC  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1 -Wformat -Wformat-security -fstack-protector -fstack-protector-strong -fno-strict-aliasing -DHAVE_C11    CMakeFiles/cmTC_8df3b.dir/src.c.o  -o cmTC_8df3b -rdynamic /usr/lib/x86_64-linux-gnu/libreadline.so 
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }

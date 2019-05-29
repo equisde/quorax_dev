@@ -1,0 +1,2 @@
+/usr/bin/ar qc libblocks.a  CMakeFiles/blocks.dir/blocks.cpp.o CMakeFiles/blocks.dir/generated_checkpoints.c.o CMakeFiles/blocks.dir/generated_testnet_blocks.c.o CMakeFiles/blocks.dir/generated_stagenet_blocks.c.o
+/usr/bin/ranlib libblocks.a

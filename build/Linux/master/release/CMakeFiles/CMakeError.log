@@ -1,0 +1,214 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_051d5/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_051d5.dir/build.make CMakeFiles/cmTC_051d5.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_051d5.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_051d5.dir/CheckSymbolExists.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_051d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_051d5.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_051d5.dir/CheckSymbolExists.c.o  -o cmTC_051d5 -rdynamic 
+CMakeFiles/cmTC_051d5.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_051d5.dir/build.make:97: recipe for target 'cmTC_051d5' failed
+make[2]: *** [cmTC_051d5] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_051d5/fast' failed
+make[1]: *** [cmTC_051d5/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+File /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function memset_s exists in the c failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4287/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f4287.dir/build.make CMakeFiles/cmTC_f4287.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4287.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -pthread -DCHECK_FUNCTION_EXISTS=memset_s   -o CMakeFiles/cmTC_f4287.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f4287
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4287.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=memset_s    CMakeFiles/cmTC_f4287.dir/CheckFunctionExists.c.o  -o cmTC_f4287  -L/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/string.h -rdynamic -lc -Wl,-rpath,/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/string.h 
+CMakeFiles/cmTC_f4287.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `memset_s'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f4287.dir/build.make:97: recipe for target 'cmTC_f4287' failed
+make[2]: *** [cmTC_f4287] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f4287/fast' failed
+make[1]: *** [cmTC_f4287/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Determining if the function explicit_bzero exists in the c failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_df32c/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_df32c.dir/build.make CMakeFiles/cmTC_df32c.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_df32c.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -pthread -DCHECK_FUNCTION_EXISTS=explicit_bzero   -o CMakeFiles/cmTC_df32c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_df32c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df32c.dir/link.txt --verbose=1
+/usr/bin/cc   -pthread -DCHECK_FUNCTION_EXISTS=explicit_bzero    CMakeFiles/cmTC_df32c.dir/CheckFunctionExists.c.o  -o cmTC_df32c  -L/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/strings.h -rdynamic -lc -Wl,-rpath,/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/strings.h 
+CMakeFiles/cmTC_df32c.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `explicit_bzero'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_df32c.dir/build.make:97: recipe for target 'cmTC_df32c' failed
+make[2]: *** [cmTC_df32c] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_df32c/fast' failed
+make[1]: *** [cmTC_df32c/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test _fcf_protection=full_c failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1ee5d/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1ee5d.dir/build.make CMakeFiles/cmTC_1ee5d.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ee5d.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_fcf_protection=full_c   -fcf-protection=full -o CMakeFiles/cmTC_1ee5d.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-fcf-protection=full'
+CMakeFiles/cmTC_1ee5d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1ee5d.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_1ee5d.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1ee5d/fast' failed
+make[1]: *** [cmTC_1ee5d/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _fcf_protection=full_cxx failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a5f5/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9a5f5.dir/build.make CMakeFiles/cmTC_9a5f5.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9a5f5.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_fcf_protection=full_cxx   -fcf-protection=full -o CMakeFiles/cmTC_9a5f5.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-fcf-protection=full'
+CMakeFiles/cmTC_9a5f5.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_9a5f5.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_9a5f5.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9a5f5/fast' failed
+make[1]: *** [cmTC_9a5f5/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test _fstack_clash_protection_c failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cacd6/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cacd6.dir/build.make CMakeFiles/cmTC_cacd6.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cacd6.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_fstack_clash_protection_c   -fstack-clash-protection -o CMakeFiles/cmTC_cacd6.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-fstack-clash-protection'
+CMakeFiles/cmTC_cacd6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_cacd6.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_cacd6.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cacd6/fast' failed
+make[1]: *** [cmTC_cacd6/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _fstack_clash_protection_cxx failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_99779/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_99779.dir/build.make CMakeFiles/cmTC_99779.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_99779.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_fstack_clash_protection_cxx   -fstack-clash-protection -o CMakeFiles/cmTC_99779.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-fstack-clash-protection'
+CMakeFiles/cmTC_99779.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_99779.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_99779.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_99779/fast' failed
+make[1]: *** [cmTC_99779/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C SOURCE FILE Test _mmitigate_rop_c failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_229e2/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_229e2.dir/build.make CMakeFiles/cmTC_229e2.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_229e2.dir/src.c.o
+/usr/bin/cc    -pthread -maes -march=native -fno-strict-aliasing -D_mmitigate_rop_c   -mmitigate-rop -o CMakeFiles/cmTC_229e2.dir/src.c.o   -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-mmitigate-rop'
+CMakeFiles/cmTC_229e2.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_229e2.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_229e2.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_229e2/fast' failed
+make[1]: *** [cmTC_229e2/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C++ SOURCE FILE Test _mmitigate_rop_cxx failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0869c/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0869c.dir/build.make CMakeFiles/cmTC_0869c.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0869c.dir/src.cxx.o
+/usr/bin/c++     -pthread -maes -march=native -fno-strict-aliasing -D_mmitigate_rop_cxx   -mmitigate-rop -o CMakeFiles/cmTC_0869c.dir/src.cxx.o -c /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-mmitigate-rop'
+CMakeFiles/cmTC_0869c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_0869c.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_0869c.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0869c/fast' failed
+make[1]: *** [cmTC_0869c/fast] Error 2
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the -Wl,-z,noexecheap linker flag is supported failed with the following output:
+Change Dir: /home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6a6d7/fast"
+make[1]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6a6d7.dir/build.make CMakeFiles/cmTC_6a6d7.dir/build
+make[2]: Entering directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6a6d7.dir/CheckLinkerFlag.c.o
+/usr/bin/cc    -Wl,-z,noexecheap    -Wl,-z,noexecheap -o CMakeFiles/cmTC_6a6d7.dir/CheckLinkerFlag.c.o   -c /home/saargo/quorax/cmake/CheckLinkerFlag.c
+Linking C executable cmTC_6a6d7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a6d7.dir/link.txt --verbose=1
+/usr/bin/cc  -Wl,-z,noexecheap     CMakeFiles/cmTC_6a6d7.dir/CheckLinkerFlag.c.o  -o cmTC_6a6d7 -rdynamic 
+/usr/bin/ld: warning: -z noexecheap ignored.
+make[2]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/saargo/quorax/build/Linux/master/release/CMakeFiles/CMakeTmp'
+
+
