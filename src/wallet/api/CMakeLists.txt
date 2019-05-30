@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -58,9 +58,9 @@ set(wallet_api_private_headers
   subaddress_account.h
   unsigned_transaction.h)
 
-sevabit_private_headers(wallet_api
+quorax_private_headers(wallet_api
   ${wallet_api_private_headers})
-sevabit_add_library(wallet_api
+quorax_add_library(wallet_api
   ${wallet_api_sources}
   ${wallet_api_headers}
   ${wallet_api_private_headers})

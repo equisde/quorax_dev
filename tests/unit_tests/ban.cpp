@@ -89,7 +89,7 @@ public:
   bool prune_blockchain(uint32_t pruning_seed = 0) { return true; }
   void stop() {}
 
-  // TODO(sevabit): Write tests
+  // TODO(quorax): Write tests
   bool add_deregister_vote(const super_nodes::deregister_vote& vote, cryptonote::vote_verification_context &vvc) { return true; }
 };
 

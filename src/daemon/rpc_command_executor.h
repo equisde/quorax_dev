@@ -7,7 +7,7 @@
 */
 
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 // 
 // All rights reserved.
 // 

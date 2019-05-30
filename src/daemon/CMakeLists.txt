@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -63,9 +63,9 @@ set(daemon_private_headers
   ../p2p/p2p_protocol_defs.h
   ../p2p/stdafx.h)
 
-sevabit_private_headers(daemon
+quorax_private_headers(daemon
   ${daemon_private_headers})
-sevabit_add_executable(daemon
+quorax_add_executable(daemon
   ${daemon_sources}
   ${daemon_headers}
   ${daemon_private_headers})
@@ -95,5 +95,5 @@ target_link_libraries(daemon
     ${Blocks})
 set_property(TARGET daemon
   PROPERTY
-    OUTPUT_NAME "sevabitd")
+    OUTPUT_NAME "quoraxd")
 install(TARGETS daemon DESTINATION bin)

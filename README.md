@@ -1,34 +1,34 @@
-# Sevabit
+# QuoraX
 
 <p align="center">
-    <a href="https://github.com/sevabit/sevabit/commits/dev"><img alt="pipeline status" src="https://gitlab.com/sevabitproject/sevabit/badges/dev/pipeline.svg" /></a>
+    <a href="https://github.com/quorax/quorax/commits/dev"><img alt="pipeline status" src="https://gitlab.com/quoraxproject/quorax/badges/dev/pipeline.svg" /></a>
 </p>
 
-Copyright (c) 2018 The Sevabit Project.   
+Copyright (c) 2018 The QuoraX Project.   
 Portions Copyright (c) 2014-2018 The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Development resources
 
-- Web: [sevabit.com](https://sevabit.com)
-- Telegram: [t.me/Sevabit](https://t.me/Sevabit)
-- Mail: [admin@sevabit.com](mailto:admin@sevabit.com)
-- GitHub: [https://github.com/sevabit/sevabit](https://github.com/sevabit/sevabit)
+- Web: [quorax.com](https://quorax.com)
+- Telegram: [t.me/QuoraX](https://t.me/QuoraX)
+- Mail: [admin@quorax.com](mailto:admin@quorax.com)
+- GitHub: [https://github.com/quorax/quorax](https://github.com/quorax/quorax)
 - Discord: [https://discord.gg/MApcHzB](https://discord.gg/MApcHzB)
 
 ## Vulnerability disclosure
 
-- Check out our [Vulnerability Response Process](https://sevabit.github.io/sevabit-docs/Contributing/VULNERABILITY_RESPONSE_SEVABIT), encourages prompt disclosure of any Vulnerabilities
+- Check out our [Vulnerability Response Process](https://quorax.github.io/quorax-docs/Contributing/VULNERABILITY_RESPONSE_SEVABIT), encourages prompt disclosure of any Vulnerabilities
 
 ## Information
 
-Sevabit is a privacy-focused cryptocurrency based on Monero/Loki. Sevabit currently offers an incentivised full node layer, over the coming months we will be looking to support a secondary p2p network (Sevabitnet) and a messenger that offers private communications based on the Signal protocol (Sevabit Messenger).
+QuoraX is a privacy-focused cryptocurrency based on Monero/Loki. QuoraX currently offers an incentivised full node layer, over the coming months we will be looking to support a secondary p2p network (QuoraXnet) and a messenger that offers private communications based on the Signal protocol (QuoraX Messenger).
 
 More information on the project can be found on the website and in the whitepaper.
 
-Sevabit is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact admin@sevabit.com
+QuoraX is an open source project, and we encourage contributions from anyone with something to offer. For more information on contributing, please contact admin@quorax.com
 
-## Compiling Sevabit from source
+## Compiling QuoraX from source
 
 ### Dependencies
 
@@ -74,15 +74,15 @@ Debian / Ubuntu one liner for all dependencies
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/sevabit/sevabit`
+`$ git clone --recursive https://github.com/quorax/quorax`
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd sevabit && git submodule init && git submodule update`
+`$ cd quorax && git submodule init && git submodule update`
 
 ### Build instructions
 
-Sevabit uses the CMake build system and a top-level [Makefile](Makefile) that
+QuoraX uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
 #### On Linux and OS X
@@ -90,7 +90,7 @@ invokes cmake commands as needed.
 * Install the dependencies
 * Change to the root of the source code directory, change to the most recent release branch, and build:
 
-        cd sevabit
+        cd quorax
         git checkout master
         make
 
@@ -103,16 +103,16 @@ invokes cmake commands as needed.
     https://github.com/zeromq/cppzmq to `/usr/local/include` should fix that error.
 
     *Note*: The instructions above will compile the most stable release of the
-    Sevabit software. If you would like to use and test the most recent software,
+    QuoraX software. If you would like to use and test the most recent software,
     use ```git checkout master```. The master branch may contain updates that are
     both unstable and incompatible with release software, though testing is always
     encouraged.
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/sevabit/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/quorax/build/release/bin"` to `.profile`
 
-* Run Sevabit with `sevabitd --detach`
+* Run QuoraX with `quoraxd --detach`
 
 * **Optional**: build and run the test suite to verify the binaries:
 
@@ -140,7 +140,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 
-* Install the dependencies for Sevabit from the 'Debian' column in the table above.
+* Install the dependencies for QuoraX from the 'Debian' column in the table above.
 
 * Increase the system swap size:
 ```
@@ -151,10 +151,10 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 ```
 * If using an external hard disk without an external power supply, ensure it gets enough power to avoid hardware issues when syncing, by adding the line "max_usb_current=1" to /boot/config.txt
 
-* Clone sevabit and checkout most recent release version:
+* Clone quorax and checkout most recent release version:
 ```
-        git clone https://github.com/sevabit/sevabit.git
-	cd sevabit
+        git clone https://github.com/quorax/quorax.git
+	cd quorax
 	git checkout master
 ```
 * Build:
@@ -165,15 +165,15 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 
 * The resulting executables can be found in `build/release/bin`
 
-* Add `PATH="$PATH:$HOME/sevabit/build/release/bin"` to `.profile`
+* Add `PATH="$PATH:$HOME/quorax/build/release/bin"` to `.profile`
 
-* Run Sevabit with `sevabitd --detach`
+* Run QuoraX with `quoraxd --detach`
 
 * You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
 
 #### *Note for Raspbian Jessie users:*
 
-If you are using the older Raspbian Jessie image, compiling Sevabit is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with Sevabit, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
+If you are using the older Raspbian Jessie image, compiling QuoraX is a bit more complicated. The version of Boost available in the Debian Jessie repositories is too old to use with QuoraX, and thus you must compile a newer version yourself. The following explains the extra steps, and has been tested on a Raspberry Pi 2 with a clean install of minimal Raspbian Jessie.
 
 * As before, `apt-get update && apt-get upgrade` to install all of the latest software, and increase the system swap size
 
@@ -184,7 +184,7 @@ If you are using the older Raspbian Jessie image, compiling Sevabit is a bit mor
 	sudo /etc/init.d/dphys-swapfile start  
 ```
 
-* Then, install the dependencies for Sevabit except `libunwind` and `libboost-all-dev`
+* Then, install the dependencies for QuoraX except `libunwind` and `libboost-all-dev`
 
 * Install the latest version of boost (this may first require invoking `apt-get remove --purge libboost*` to remove a previous version if you're not using a clean install):
 ```
@@ -201,7 +201,7 @@ If you are using the older Raspbian Jessie image, compiling Sevabit is a bit mor
 ```
 * Wait ~4 hours
 
-* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone sevabit and checkout most recent release version" step.
+* From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone quorax and checkout most recent release version" step.
 
 #### On Windows:
 
@@ -247,15 +247,15 @@ application.
 
 * To git clone, run:
 
-        git clone --recursive https://github.com/sevabit/sevabit.git
+        git clone --recursive https://github.com/quorax/quorax.git
 
 **Building**
 
 * Change to the cloned directory, run:
 	
-        cd ~/sevabit
+        cd ~/quorax
 
-* **Optional**: if you would like a specific [version/tag](https://github.com/sevabit/sevabit/tags), do a git checkout for that version. eg. 'v2.0.3'. If you dont care about the version and just want binaries from master, skip this step:
+* **Optional**: if you would like a specific [version/tag](https://github.com/quorax/quorax/tags), do a git checkout for that version. eg. 'v2.0.3'. If you dont care about the version and just want binaries from master, skip this step:
 	
         git checkout v2.0.3
 
@@ -267,7 +267,7 @@ application.
 
         make release-static-win32
 
-* The resulting executables can be found in `build/<MinGW version>/<sevabit version>/release/bin`
+* The resulting executables can be found in `build/<MinGW version>/<quorax version>/release/bin`
 
 * **Optional**: to build Windows binaries suitable for debugging on a 64-bit system, run:
 
@@ -277,11 +277,11 @@ application.
 
         make debug-static-win32
 
-* The resulting executables can be found in `build/<MinGW version>/<sevabit version>/debug/bin`
+* The resulting executables can be found in `build/<MinGW version>/<quorax version>/debug/bin`
 
 ### On FreeBSD:
 
-The project can be built from scratch by following instructions for Linux above. If you are running sevabit in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
+The project can be built from scratch by following instructions for Linux above. If you are running quorax in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
 
 ### On OpenBSD:
 
@@ -296,7 +296,7 @@ The doxygen and graphviz packages are optional and require the xbase set.
 The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 
-You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Sevabit.
+You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by QuoraX.
 
 To build: `env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
 
@@ -369,7 +369,7 @@ cmake ..
 doas make install
 ```
 
-Build sevabit: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
+Build quorax: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
 
 #### OpenBSD >= 6.4
 
@@ -402,13 +402,13 @@ Then you can run make as usual.
 ### On Linux for Android (using docker):
 
         # Build image (for ARM 32-bit)
-        docker build -f utils/build_scripts/android32.Dockerfile -t sevabit-android .
+        docker build -f utils/build_scripts/android32.Dockerfile -t quorax-android .
         # Build image (for ARM 64-bit)
-        docker build -f utils/build_scripts/android64.Dockerfile -t sevabit-android .
+        docker build -f utils/build_scripts/android64.Dockerfile -t quorax-android .
         # Create container
-        docker create -it --name sevabit-android sevabit-android bash
+        docker create -it --name quorax-android quorax-android bash
         # Get binaries
-        docker cp sevabit-android:/src/build/release/bin .
+        docker cp quorax-android:/src/build/release/bin .
 
 ### Building portable statically linked binaries
 
@@ -436,38 +436,38 @@ You can also cross-compile static binaries on Linux for Windows and macOS with t
 
 The required packages are the names for each toolchain on apt. Depending on your distro, they may have different names.
 
-Using `depends` might also be easier to compile Sevabit on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distro (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as depicted above.
+Using `depends` might also be easier to compile QuoraX on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distro (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as depicted above.
 
 The produced binaries still link libc dynamically. If the binary is compiled on a current distribution, it might not run on an older distribution with an older installation of libc. Passing `-DBACKCOMPAT=ON` to cmake will make sure that the binary will run on systems having at least libc version 2.17.
 
-## Installing Sevabit from a package
+## Installing QuoraX from a package
 
 * Docker
 
         # Build using all available cores
-        docker build -t sevabit .
+        docker build -t quorax .
 
         # or build using a specific number of cores (reduce RAM requirement)
-        docker build --build-arg NPROC=1 -t sevabit .
+        docker build --build-arg NPROC=1 -t quorax .
 
         # either run in foreground
-        docker run -it -v /sevabit/chain:/root/.sevabit -v /sevabit/wallet:/wallet -p 22048:22048 sevabit
+        docker run -it -v /quorax/chain:/root/.quorax -v /quorax/wallet:/wallet -p 22048:22048 quorax
 
         # or in background
-        docker run -it -d -v /sevabit/chain:/root/.sevabit -v /sevabit/wallet:/wallet -p 22048:22048 sevabit
+        docker run -it -d -v /quorax/chain:/root/.quorax -v /quorax/wallet:/wallet -p 22048:22048 quorax
 
 * The build needs 3 GB space.
 * Wait one  hour or more
 
-## Running sevabitd
+## Running quoraxd
 
 The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
 foreground:
 
-    ./bin/sevabitd
+    ./bin/quoraxd
 
-To list all available options, run `./bin/sevabitd --help`.  Options can be
+To list all available options, run `./bin/quoraxd --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
 `--config-file` argument.  To specify an option in the configuration file, add
 a line with the syntax `argumentname=value`, where `argumentname` is the name
@@ -475,7 +475,7 @@ of the argument without the leading dashes, for example `log-level=1`.
 
 To run in background:
 
-    ./bin/sevabitd --log-file sevabitd.log --detach
+    ./bin/quoraxd --log-file quoraxd.log --detach
 
 ## Internationalization
 
@@ -483,31 +483,31 @@ See [README.i18n.md](README.i18n.md).
 
 ## Using Tor
 
-While Sevabit isn't made to integrate with Tor, it can be used wrapped with torsocks, by
+While QuoraX isn't made to integrate with Tor, it can be used wrapped with torsocks, by
 setting the following configuration parameters and environment variables:
 
 * `--p2p-bind-ip 127.0.0.1` on the command line or `p2p-bind-ip=127.0.0.1` in
-  sevabitd.conf to disable listening for connections on external interfaces.
-* `--no-igd` on the command line or `no-igd=1` in sevabitd.conf to disable IGD
+  quoraxd.conf to disable listening for connections on external interfaces.
+* `--no-igd` on the command line or `no-igd=1` in quoraxd.conf to disable IGD
   (UPnP port forwarding negotiation), which is pointless with Tor.
 * `DNS_PUBLIC=tcp` or `DNS_PUBLIC=tcp://x.x.x.x` where x.x.x.x is the IP of the
   desired DNS server, for DNS requests to go over TCP, so that they are routed
-  through Tor. When IP is not specified, sevabitd uses the default list of
+  through Tor. When IP is not specified, quoraxd uses the default list of
   servers defined in [src/common/dns_utils.cpp](src/common/dns_utils.cpp).
-* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow sevabitd to bind to interfaces
+* `TORSOCKS_ALLOW_INBOUND=1` to tell torsocks to allow quoraxd to bind to interfaces
    to accept connections from the wallet. On some Linux systems, torsocks
    allows binding to localhost by default, so setting this variable is only
    necessary to allow binding to local LAN/VPN interfaces to allow wallets to
    connect from remote hosts. On other systems, it may be needed for local wallets
    as well.
 * Do NOT pass `--detach` when running through torsocks with systemd, (see
-  [utils/systemd/sevabitd.service](utils/systemd/sevabitd.service) for details).
+  [utils/systemd/quoraxd.service](utils/systemd/quoraxd.service) for details).
 * If you use the wallet with a Tor daemon via the loopback IP (eg, 127.0.0.1:9050),
   then use `--untrusted-daemon` unless it is your own hidden service.
 
-Example command line to start sevabitd through Tor:
+Example command line to start quoraxd through Tor:
 
-    DNS_PUBLIC=tcp torsocks sevabitd --p2p-bind-ip 127.0.0.1 --no-igd
+    DNS_PUBLIC=tcp torsocks quoraxd --p2p-bind-ip 127.0.0.1 --no-igd
 
 ### Using Tor on Tails
 
@@ -516,12 +516,12 @@ to add a rule to allow this connection too, in addition to telling torsocks to
 allow inbound connections. Full example:
 
     sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18081 -j ACCEPT
-    DNS_PUBLIC=tcp torsocks ./sevabitd --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
+    DNS_PUBLIC=tcp torsocks ./quoraxd --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
         --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain
 
 ## Debugging
 
-This section contains general instructions for debugging failed installs or problems encountered with Sevabit. First ensure you are running the latest version built from the Github repo.
+This section contains general instructions for debugging failed installs or problems encountered with QuoraX. First ensure you are running the latest version built from the Github repo.
 
 ### Obtaining stack traces and core dumps on Unix systems
 
@@ -534,7 +534,7 @@ Run the build.
 Once it stalls, enter the following command:
 
 ```
-gdb /path/to/sevabitd `pidof sevabitd`
+gdb /path/to/quoraxd `pidof quoraxd`
 ```
 
 Type `thread apply all bt` within gdb in order to obtain the stack trace
@@ -547,21 +547,21 @@ Enter `echo core | sudo tee /proc/sys/kernel/core_pattern` to stop cores from be
 
 Run the build.
 
-When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as sevabitd. It may be named just `core`, or `core.xxxx` with numbers appended.
+When it terminates with an output along the lines of "Segmentation fault (core dumped)", there should be a core dump file in the same directory as quoraxd. It may be named just `core`, or `core.xxxx` with numbers appended.
 
 You can now analyse this core dump with `gdb` as follows:
 
-`gdb /path/to/sevabitd /path/to/dumpfile`
+`gdb /path/to/quoraxd /path/to/dumpfile`
 
 Print the stack trace with `bt`
 
-* To run sevabit within gdb:
+* To run quorax within gdb:
 
-Type `gdb /path/to/sevabitd`
+Type `gdb /path/to/quoraxd`
 
 Pass command-line options with `--args` followed by the relevant arguments
 
-Type `run` to run sevabitd
+Type `run` to run quoraxd
 
 ### Analysing memory corruption
 
@@ -569,15 +569,15 @@ There are two tools available:
 
 * ASAN
 
-Configure Sevabit with the -D SANITIZE=ON cmake flag, eg:
+Configure QuoraX with the -D SANITIZE=ON cmake flag, eg:
 
     cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
 
-You can then run the sevabit tools normally. Performance will typically halve.
+You can then run the quorax tools normally. Performance will typically halve.
 
 * valgrind
 
-Install valgrind and run as `valgrind /path/to/sevabitd`. It will be very slow.
+Install valgrind and run as `valgrind /path/to/quoraxd`. It will be very slow.
 
 ### LMDB
 
@@ -585,7 +585,7 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
-`cd ~/sevabit/external/db_drivers/liblmdb && make`
+`cd ~/quorax/external/db_drivers/liblmdb && make`
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
 

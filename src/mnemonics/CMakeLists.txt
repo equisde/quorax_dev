@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -50,9 +50,9 @@ set(mnemonics_private_headers
   esperanto.h
   lojban.h)
 
-sevabit_private_headers(mnemonics
+quorax_private_headers(mnemonics
   ${mnemonics_private_headers})
-sevabit_add_library(mnemonics
+quorax_add_library(mnemonics
   ${mnemonics_sources}
   ${mnemonics_headers}
   ${mnemonics_private_headers})

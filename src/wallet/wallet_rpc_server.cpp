@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -65,7 +65,7 @@ namespace
   const command_line::arg_descriptor<std::string> arg_wallet_dir = {"wallet-dir", "Directory for newly created wallets"};
   const command_line::arg_descriptor<bool> arg_prompt_for_password = {"prompt-for-password", "Prompts for password when not provided", false};
 
-  constexpr const char default_rpc_username[] = "sevabit";
+  constexpr const char default_rpc_username[] = "quorax";
 
   boost::optional<tools::password_container> password_prompter(const char *prompt, bool verify)
   {
@@ -206,7 +206,7 @@ namespace tools
           string_encoding::base64_encode(rand_128bit.data(), rand_128bit.size())
         );
 
-        std::string temp = "sevabit-wallet-rpc." + bind_port + ".login";
+        std::string temp = "quorax-wallet-rpc." + bind_port + ".login";
         rpc_login_file = tools::private_file::create(temp);
         if (!rpc_login_file.handle())
         {
@@ -635,7 +635,7 @@ namespace tools
           }
           if (addresses.empty())
           {
-            er.message = std::string("No Sevabit address found at ") + url;
+            er.message = std::string("No QuoraX address found at ") + url;
             return {};
           }
           return addresses[0];
@@ -1865,7 +1865,7 @@ namespace tools
         }
         if (addresses.empty())
         {
-          er.message = std::string("No Sevabit address found at ") + url;
+          er.message = std::string("No QuoraX address found at ") + url;
           return {};
         }
         return addresses[0];
@@ -2651,7 +2651,7 @@ namespace tools
         }
         if (addresses.empty())
         {
-          er.message = std::string("No Sevabit address found at ") + url;
+          er.message = std::string("No QuoraX address found at ") + url;
           return {};
         }
         return addresses[0];
@@ -3767,7 +3767,7 @@ namespace tools
             }
             if (addresses.empty())
             {
-              er.message = std::string("No Sevabit address found at ") + url;
+              er.message = std::string("No QuoraX address found at ") + url;
               return {};
             }
             address = addresses[0];
@@ -3802,7 +3802,7 @@ namespace tools
   //------------------------------------------------------------------------------------------------------------------------------
 
   //
-  // Sevabit
+  // QuoraX
   //
   bool wallet_rpc_server::on_stake(const wallet_rpc::COMMAND_RPC_STAKE::request& req, wallet_rpc::COMMAND_RPC_STAKE::response& res, epee::json_rpc::error& er, const connection_context *ctx)
   {
@@ -3830,7 +3830,7 @@ namespace tools
       return false;
     }
 
-    // NOTE(sevabit): Pre-emptively set subaddr_account to 0. We don't support onwards from Infinite Staking which is when this call was implemented.
+    // NOTE(quorax): Pre-emptively set subaddr_account to 0. We don't support onwards from Infinite Staking which is when this call was implemented.
     tools::wallet2::stake_result stake_result = m_wallet->create_stake_tx(snode_key, addr_info, req.amount, 0 /*amount_fraction*/, req.priority, 0 /*subaddr_account*/, req.subaddr_indices);
     if (stake_result.status != tools::wallet2::stake_result_status::success)
     {
@@ -3863,7 +3863,7 @@ namespace tools
         args.erase(args.begin());
     }
 
-    // NOTE(sevabit): Pre-emptively set subaddr_account to 0. We don't support onwards from Infinite Staking which is when this call was implemented.
+    // NOTE(quorax): Pre-emptively set subaddr_account to 0. We don't support onwards from Infinite Staking which is when this call was implemented.
     tools::wallet2::register_super_node_result register_result = m_wallet->create_register_super_node_tx(args, 0 /*subaddr_account*/);
     if (register_result.status != tools::wallet2::register_super_node_result_status::success)
     {
@@ -3901,7 +3901,7 @@ namespace tools
     return true;
   }
 
-  // TODO(sevabit): Deprecate this and make it return the TX as hex? Then just transfer it as normal? But these have no fees and or amount .. so maybe not?
+  // TODO(quorax): Deprecate this and make it return the TX as hex? Then just transfer it as normal? But these have no fees and or amount .. so maybe not?
   bool wallet_rpc_server::on_request_stake_unlock(const wallet_rpc::COMMAND_RPC_REQUEST_STAKE_UNLOCK::request& req, wallet_rpc::COMMAND_RPC_REQUEST_STAKE_UNLOCK::response& res, epee::json_rpc::error& er, const connection_context *ctx)
   {
     if (!m_wallet) return not_open(er);
@@ -4137,12 +4137,12 @@ int main(int argc, char** argv) {
   bool should_terminate = false;
   std::tie(vm, should_terminate) = wallet_args::main(
     argc, argv,
-    "sevabit-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>|--wallet-dir=<directory>] [--rpc-bind-port=<port>]",
-    tools::wallet_rpc_server::tr("This is the RPC sevabit wallet. It needs to connect to a sevabit\ndaemon to work correctly."),
+    "quorax-wallet-rpc [--wallet-file=<file>|--generate-from-json=<file>|--wallet-dir=<directory>] [--rpc-bind-port=<port>]",
+    tools::wallet_rpc_server::tr("This is the RPC quorax wallet. It needs to connect to a quorax\ndaemon to work correctly."),
     desc_params,
     po::positional_options_description(),
     [](const std::string &s, bool emphasis){ epee::set_console_color(emphasis ? epee::console_color_white : epee::console_color_default, true); std::cout << s << std::endl; if (emphasis) epee::reset_console_color(); },
-    "sevabit-wallet-rpc.log",
+    "quorax-wallet-rpc.log",
     true
   );
   if (!vm)

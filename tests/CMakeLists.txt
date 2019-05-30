@@ -73,8 +73,8 @@ file(COPY
   data/wallet_testnet.keys
   data/wallet_testnet
   data/outputs
-  data/unsigned_sevabit_tx
-  data/signed_sevabit_tx
+  data/unsigned_quorax_tx
+  data/signed_quorax_tx
   DESTINATION data)
 
 add_subdirectory(core_tests)

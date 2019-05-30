@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -35,13 +35,13 @@ if (WIN32 OR STATIC)
   add_definitions(-DMINIUPNP_STATICLIB)
 endif ()
 
-function (sevabit_private_headers group)
+function (quorax_private_headers group)
   source_group("${group}\\Private"
     FILES
       ${ARGN})
 endfunction ()
 
-function (sevabit_install_headers subdir)
+function (quorax_install_headers subdir)
   install(
     FILES       ${ARGN}
     DESTINATION "include/${subdir}"
@@ -59,7 +59,7 @@ function (enable_stack_trace target)
   endif()
 endfunction()
 
-function (sevabit_add_executable name)
+function (quorax_add_executable name)
   source_group("${name}"
     FILES
       ${ARGN})
@@ -78,11 +78,11 @@ function (sevabit_add_executable name)
   enable_stack_trace("${name}")
 endfunction ()
 
-function (sevabit_add_library name)
-    sevabit_add_library_with_deps(NAME "${name}" SOURCES ${ARGN})
+function (quorax_add_library name)
+    quorax_add_library_with_deps(NAME "${name}" SOURCES ${ARGN})
 endfunction()
 
-function (sevabit_add_library_with_deps)
+function (quorax_add_library_with_deps)
   cmake_parse_arguments(SEVABIT_ADD_LIBRARY "" "NAME" "DEPENDS;SOURCES" ${ARGN})
   source_group("${SEVABIT_ADD_LIBRARY_NAME}" FILES ${SEVABIT_ADD_LIBRARY_SOURCES})
 
@@ -102,7 +102,7 @@ function (sevabit_add_library_with_deps)
 endfunction ()
 
 include(Version)
-sevabit_add_library(version SOURCES ${CMAKE_BINARY_DIR}/version.cpp DEPENDS genversion)
+quorax_add_library(version SOURCES ${CMAKE_BINARY_DIR}/version.cpp DEPENDS genversion)
 
 add_subdirectory(common)
 add_subdirectory(crypto)

@@ -3,7 +3,7 @@
 #define SEVABIT_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
 #include "common/loki_integration_test_hooks.h"
 
-// NOTE(sevabit): This file only exists because I need a way to hook into the
+// NOTE(quorax): This file only exists because I need a way to hook into the
 // message writer for integration tests. Originally this was a header only file,
 // which means it needs to know the implementation of
 // loki_integration_test_hooks.h functions which isn't possible to expose in
@@ -18,7 +18,7 @@ tools::scoped_message_writer::~scoped_message_writer()
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
     std::cout << m_oss.str();
-    sevabit::write_redirected_stdout_to_shared_mem();
+    quorax::write_redirected_stdout_to_shared_mem();
     return;
 #endif
 

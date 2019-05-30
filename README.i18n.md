@@ -1,9 +1,9 @@
-Sevabit daemon internationalization
+QuoraX daemon internationalization
 ==================================
 
-The Sevabit command line tools can be translated in various languages. If you wish to contribute and need help/support, contact the [Sevabit Localization Workgroup on Taiga](https://taiga.getsevabit.org/project/erciccione-sevabit-localization/) or come chat on `#sevabit-translations` (Freenode/IRC, riot/matrix, MatterMost)
+The QuoraX command line tools can be translated in various languages. If you wish to contribute and need help/support, contact the [QuoraX Localization Workgroup on Taiga](https://taiga.getquorax.org/project/erciccione-quorax-localization/) or come chat on `#quorax-translations` (Freenode/IRC, riot/matrix, MatterMost)
 
-In order to use the same translation workflow as the [Sevabit GUI](https://github.com/sevabit/sevabit-gui), they use Qt Linguist translation files.  However, to avoid the dependencies on Qt this normally implies, they use a custom loader to read those files at runtime.
+In order to use the same translation workflow as the [QuoraX GUI](https://github.com/quorax/quorax-gui), they use Qt Linguist translation files.  However, to avoid the dependencies on Qt this normally implies, they use a custom loader to read those files at runtime.
 
 ### Tools for translators
 
@@ -19,11 +19,11 @@ To update ts files after changing source code:
 
 To add a new language, eg Spanish (ISO code es):
 
-    cp translations/sevabit.ts translations/sevabit_es.ts
+    cp translations/quorax.ts translations/quorax_es.ts
 
 To edit translations for Spanish:
 
-    linguist translations/sevabit_es.ts
+    linguist translations/quorax_es.ts
 
 To build translations after modifying them:
 
@@ -31,7 +31,7 @@ To build translations after modifying them:
 
 To test a translation:
 
-    LANG=es ./build/release/bin/sevabit-wallet-cli
+    LANG=es ./build/release/bin/quorax-wallet-cli
 
 To add new translatable strings in the source code:
 

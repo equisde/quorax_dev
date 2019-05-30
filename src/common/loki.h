@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Sevabit Project
+// Copyright (c) 2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -31,11 +31,11 @@
 
 #include <string>
 
-namespace sevabit
+namespace quorax
 {
 double      round           (double);
 double      exp2            (double);
 std::string hex64_to_base32z(std::string const& src);
-}; // namespace Sevabit
+}; // namespace QuoraX
 
 #endif // SEVABIT_H

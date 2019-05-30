@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -424,21 +424,21 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-      full_addrs.insert("seed1.sevabit.com:23048");   
-      full_addrs.insert("seed2.sevabit.com:23048");
+      full_addrs.insert("seed1.quorax.com:23048");   
+      full_addrs.insert("seed2.quorax.com:23048");
     }
     else if (nettype == cryptonote::STAGENET)
     {
-      full_addrs.insert("seed1.sevabit.com:24048");   
-      full_addrs.insert("seed2.sevabit.com:24048");
+      full_addrs.insert("seed1.quorax.com:24048");   
+      full_addrs.insert("seed2.quorax.com:24048");
     }
     else if (nettype == cryptonote::FAKECHAIN)
     {
     }
     else
     {
-      full_addrs.insert("seed1.sevabit.com:22048");   
-      full_addrs.insert("seed2.sevabit.com:22048");
+      full_addrs.insert("seed1.quorax.com:22048");   
+      full_addrs.insert("seed2.quorax.com:22048");
     }
     return full_addrs;
   }

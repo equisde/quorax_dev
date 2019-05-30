@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -101,7 +101,7 @@ namespace daemonizer
     }
     else
     {
-      //LOG_PRINT_L0("Sevabit '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL);
+      //LOG_PRINT_L0("QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL);
       return executor.run_interactive(vm);
     }
   }

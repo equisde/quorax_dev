@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -62,9 +62,9 @@ set(cryptonote_basic_private_headers
   tx_extra.h
   verification_context.h)
 
-sevabit_private_headers(cryptonote_basic
+quorax_private_headers(cryptonote_basic
   ${cryptonote_basic_private_headers})
-sevabit_add_library(cryptonote_basic
+quorax_add_library(cryptonote_basic
   ${cryptonote_basic_sources}
   ${cryptonote_basic_headers}
   ${cryptonote_basic_private_headers})

@@ -1,4 +1,4 @@
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //

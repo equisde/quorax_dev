@@ -1,4 +1,4 @@
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -166,7 +166,7 @@ namespace super_nodes
   };
 
   template<typename T>
-  void sevabit_shuffle(std::vector<T>& a, uint64_t seed);
+  void quorax_shuffle(std::vector<T>& a, uint64_t seed);
 
   class super_node_list
     : public cryptonote::Blockchain::BlockAddedHook,

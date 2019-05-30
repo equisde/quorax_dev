@@ -6,7 +6,7 @@
 #include "cryptonote_core/super_node_list.h"
 #include "cryptonote_core/super_node_deregister.h"
 
-// NOTE(sevabit): This is done this way because of the circular constructors.
+// NOTE(quorax): This is done this way because of the circular constructors.
 struct blockchain_objects_t
 {
   cryptonote::Blockchain m_blockchain;

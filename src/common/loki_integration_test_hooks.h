@@ -19,7 +19,7 @@
 #include "command_line.h"
 #include "shoom.h"
 
-namespace sevabit
+namespace quorax
 {
 struct fixed_buffer
 {
@@ -41,7 +41,7 @@ extern const command_line::arg_descriptor<std::string, false> arg_integration_te
 extern boost::mutex integration_test_mutex;
 extern bool core_is_idle;
 
-}; // namespace sevabit
+}; // namespace quorax
 
 #endif // SEVABIT_INTEGRATION_TEST_HOOKS_H
 
@@ -70,7 +70,7 @@ static sem_t              *global_stdout_semaphore_handle;
 static sem_t              *global_stdout_ready_semaphore;
 static sem_t              *global_stdin_ready_semaphore;
 
-namespace sevabit
+namespace quorax
 {
 bool core_is_idle;
 const command_line::arg_descriptor<std::string, false> arg_integration_test_hardforks_override = {
@@ -83,23 +83,23 @@ const command_line::arg_descriptor<std::string, false> arg_integration_test_hard
 const command_line::arg_descriptor<std::string, false> arg_integration_test_shared_mem_name = {
   "integration-test-shared-mem-name"
 , "Specify the shared memory base name for stdin, stdout and semaphore name"
-, "sevabit-default-integration-test-mem-name"
+, "quorax-default-integration-test-mem-name"
 , false
 };
 
 boost::mutex integration_test_mutex;
 
-} // namespace sevabit
+} // namespace quorax
 
 std::string global_stdin_semaphore_name;
 std::string global_stdout_semaphore_name;
 std::string global_stdout_ready_semaphore_name;
 std::string global_stdin_ready_semaphore_name;
 
-void sevabit::use_standard_cout()   { if (!global_std_cout) { global_std_cout = std::cout.rdbuf(); } std::cout.rdbuf(global_std_cout); }
-void sevabit::use_redirected_cout() { if (!global_std_cout) { global_std_cout = std::cout.rdbuf(); } std::cout.rdbuf(global_redirected_cout.rdbuf()); }
+void quorax::use_standard_cout()   { if (!global_std_cout) { global_std_cout = std::cout.rdbuf(); } std::cout.rdbuf(global_std_cout); }
+void quorax::use_redirected_cout() { if (!global_std_cout) { global_std_cout = std::cout.rdbuf(); } std::cout.rdbuf(global_redirected_cout.rdbuf()); }
 
-void sevabit::init_integration_test_context(const std::string &base_name)
+void quorax::init_integration_test_context(const std::string &base_name)
 {
   assert(base_name.size() > 0);
 
@@ -130,7 +130,7 @@ void sevabit::init_integration_test_context(const std::string &base_name)
     if (once_only)
     {
       once_only = false;
-      printf("Sevabit Integration Test: Shared memory %s has not been created yet, blocking ...\n", global_stdin_shared_mem->Path().c_str());
+      printf("QuoraX Integration Test: Shared memory %s has not been created yet, blocking ...\n", global_stdin_shared_mem->Path().c_str());
     }
   }
 
@@ -139,12 +139,12 @@ void sevabit::init_integration_test_context(const std::string &base_name)
   global_stdout_ready_semaphore = sem_open(global_stdout_ready_semaphore_name.c_str(), O_CREAT, 0600, 0);
   global_stdin_ready_semaphore = sem_open(global_stdin_ready_semaphore_name.c_str(), O_CREAT, 0600, 0);
 
-  if (!global_stdin_semaphore_handle)  fprintf(stderr, "Sevabit Integration Test: Failed to initialise global_stdin_semaphore_handle\n");
-  if (!global_stdout_semaphore_handle) fprintf(stderr, "Sevabit Integration Test: Failed to initialise global_stdout_semaphore_handle\n");
-  if (!global_stdout_ready_semaphore) fprintf(stderr, "Sevabit Integration Test: Failed to initialise global_stdout_ready_semaphore_handle\n");
-  if (!global_stdin_ready_semaphore) fprintf(stderr, "Sevabit Integration Test: Failed to initialise global_stdin_ready_semaphore_handle\n");
+  if (!global_stdin_semaphore_handle)  fprintf(stderr, "QuoraX Integration Test: Failed to initialise global_stdin_semaphore_handle\n");
+  if (!global_stdout_semaphore_handle) fprintf(stderr, "QuoraX Integration Test: Failed to initialise global_stdout_semaphore_handle\n");
+  if (!global_stdout_ready_semaphore) fprintf(stderr, "QuoraX Integration Test: Failed to initialise global_stdout_ready_semaphore_handle\n");
+  if (!global_stdin_ready_semaphore) fprintf(stderr, "QuoraX Integration Test: Failed to initialise global_stdin_ready_semaphore_handle\n");
 
-  printf("Sevabit Integration Test: Hooks initialised into shared memory, %s, %s, %s, %s, %s, %s\n",
+  printf("QuoraX Integration Test: Hooks initialised into shared memory, %s, %s, %s, %s, %s, %s\n",
       stdin_name.c_str(),
       stdout_name.c_str(),
       global_stdin_semaphore_name.c_str(),
@@ -153,7 +153,7 @@ void sevabit::init_integration_test_context(const std::string &base_name)
       global_stdout_ready_semaphore_name.c_str());
 }
 
-void sevabit::deinit_integration_test_context()
+void quorax::deinit_integration_test_context()
 {
   sem_unlink(global_stdin_semaphore_name.c_str());
   sem_unlink(global_stdout_semaphore_name.c_str());
@@ -204,7 +204,7 @@ static char *parse_message(char *msg_buf, int msg_buf_len)
   return ptr;
 }
 
-std::vector<std::string> sevabit::separate_stdin_to_space_delim_args(sevabit::fixed_buffer const *cmd)
+std::vector<std::string> quorax::separate_stdin_to_space_delim_args(quorax::fixed_buffer const *cmd)
 {
   std::vector<std::string> args;
   char const *start = cmd->data;
@@ -227,7 +227,7 @@ std::vector<std::string> sevabit::separate_stdin_to_space_delim_args(sevabit::fi
   return args;
 }
 
-sevabit::fixed_buffer sevabit::read_from_stdin_shared_mem()
+quorax::fixed_buffer quorax::read_from_stdin_shared_mem()
 {
   boost::unique_lock<boost::mutex> scoped_lock(integration_test_mutex);
 
@@ -261,7 +261,7 @@ sevabit::fixed_buffer sevabit::read_from_stdin_shared_mem()
   return result;
 }
 
-void sevabit::write_redirected_stdout_to_shared_mem()
+void quorax::write_redirected_stdout_to_shared_mem()
 {
   boost::unique_lock<boost::mutex> scoped_lock(integration_test_mutex);
 

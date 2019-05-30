@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -159,7 +159,7 @@ namespace cryptonote
   };
   static const command_line::arg_descriptor<std::string> arg_check_updates = {
     "check-updates"
-  , "Check for new versions of sevabit: [disabled|notify|download|update]"
+  , "Check for new versions of quorax: [disabled|notify|download|update]"
   , "notify"
   };
   static const command_line::arg_descriptor<bool> arg_fluffy_blocks  = {
@@ -337,8 +337,8 @@ namespace cryptonote
     command_line::add_arg(desc, arg_block_rate_notify);
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-    command_line::add_arg(desc, sevabit::arg_integration_test_hardforks_override);
-    command_line::add_arg(desc, sevabit::arg_integration_test_shared_mem_name);
+    command_line::add_arg(desc, quorax::arg_integration_test_hardforks_override);
+    command_line::add_arg(desc, quorax::arg_integration_test_shared_mem_name);
 #endif
 
     miner::init_options(desc);
@@ -460,7 +460,7 @@ namespace cryptonote
     start_time = std::time(nullptr);
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-    const std::string arg_integration_test_override_hardforks = command_line::get_arg(vm, sevabit::arg_integration_test_hardforks_override);
+    const std::string arg_integration_test_override_hardforks = command_line::get_arg(vm, quorax::arg_integration_test_hardforks_override);
 
     std::vector<std::pair<uint8_t, uint64_t>> integration_test_hardforks;
     if (!arg_integration_test_override_hardforks.empty())
@@ -488,8 +488,8 @@ namespace cryptonote
       test_options = &integration_hardfork_override;
 
     {
-      const std::string arg_shared_mem_name = command_line::get_arg(vm, sevabit::arg_integration_test_shared_mem_name);
-      sevabit::init_integration_test_context(arg_shared_mem_name);
+      const std::string arg_shared_mem_name = command_line::get_arg(vm, quorax::arg_integration_test_shared_mem_name);
+      quorax::init_integration_test_context(arg_shared_mem_name);
     }
 #endif
 
@@ -532,8 +532,8 @@ namespace cryptonote
       if (boost::filesystem::exists(old_files / "blockchain.bin"))
       {
         MWARNING("Found old-style blockchain.bin in " << old_files.string());
-        MWARNING("Sevabit now uses a new format. You can either remove blockchain.bin to start syncing");
-        MWARNING("the blockchain anew, or use sevabit-blockchain-export and sevabit-blockchain-import to");
+        MWARNING("QuoraX now uses a new format. You can either remove blockchain.bin to start syncing");
+        MWARNING("the blockchain anew, or use quorax-blockchain-export and quorax-blockchain-import to");
         MWARNING("convert your existing blockchain.bin to the new format. See README.md for instructions.");
         return false;
       }
@@ -1724,7 +1724,7 @@ namespace cryptonote
     {
       std::string main_message;
       if (m_offline)
-        main_message = "The daemon is running offline and will not attempt to sync to the Sevabit network.";
+        main_message = "The daemon is running offline and will not attempt to sync to the QuoraX network.";
       else
         main_message = "The daemon will start synchronizing with the network. This may take a long time to complete.";
       MGINFO_YELLOW(ENDL << "**********************************************************************" << ENDL
@@ -1759,7 +1759,7 @@ namespace cryptonote
     m_mempool.on_idle();
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-    sevabit::core_is_idle = true;
+    quorax::core_is_idle = true;
 #endif
 
     return true;
@@ -1809,7 +1809,7 @@ namespace cryptonote
   //-----------------------------------------------------------------------------------------------
   bool core::check_updates()
   {
-    static const char software[] = "sevabit";
+    static const char software[] = "quorax";
 #ifdef BUILD_TAG
     static const char buildtag[] = BOOST_PP_STRINGIZE(BUILD_TAG);
     static const char subdir[] = "cli"; // because it can never be simple
@@ -1992,7 +1992,7 @@ namespace cryptonote
       MDEBUG("blocks in the last " << seconds[n] / 60 << " minutes: " << b << " (probability " << p << ")");
       if (p < threshold)
       {
-        MWARNING("There were " << b << " blocks in the last " << seconds[n] / 60 << " minutes, there might be large hash rate changes, or we might be partitioned, cut off from the Sevabit network or under attack. Or it could be just sheer bad luck.");
+        MWARNING("There were " << b << " blocks in the last " << seconds[n] / 60 << " minutes, there might be large hash rate changes, or we might be partitioned, cut off from the QuoraX network or under attack. Or it could be just sheer bad luck.");
 
         std::shared_ptr<tools::Notify> block_rate_notify = m_block_rate_notify;
         if (block_rate_notify)

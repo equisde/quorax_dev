@@ -1,1 +1,0 @@
-cmd='/usr/bin/cmake;-DLRELEASE_PATH=;-GUnix Makefiles;/home/saargo/quorax/translations'

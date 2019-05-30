@@ -107,7 +107,7 @@ namespace tests
     bool fluffy_blocks_enabled() const { return false; }
     uint64_t prevalidate_block_hashes(uint64_t height, const std::list<crypto::hash> &hashes) { return 0; }
     uint64_t prevalidate_block_hashes(uint64_t height, const std::vector<crypto::hash> &hashes) { return 0; }
-    // TODO(sevabit): Write tests
+    // TODO(quorax): Write tests
     bool add_deregister_vote(const super_nodes::deregister_vote& vote, cryptonote::vote_verification_context &vvc) { return false; }
     bool pad_transactions() const { return false; }
     uint32_t get_blockchain_pruning_seed() const { return 0; }

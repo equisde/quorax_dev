@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2016-2018, The Monero Project
 #
 # All rights reserved.
@@ -35,9 +35,9 @@ set(serialization_headers)
 set(serialization_private_headers
   json_object.h)
 
-sevabit_private_headers(serialization
+quorax_private_headers(serialization
   ${serialization_private_headers})
-sevabit_add_library(serialization
+quorax_add_library(serialization
   ${serialization_sources}
   ${serialization_headers}
   ${serialization_private_headers})

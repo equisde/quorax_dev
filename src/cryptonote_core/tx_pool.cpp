@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -185,7 +185,7 @@ namespace cryptonote
     }
     else
     {
-      // NOTE(sevabit): This is a developer error. If we come across this in production, be conservative and just reject
+      // NOTE(quorax): This is a developer error. If we come across this in production, be conservative and just reject
       MERROR("Unrecognised transaction type: " << static_cast<uint16_t>(tx_type) << " for tx: " <<  get_transaction_hash(tx));
       return true;
     }
@@ -1326,7 +1326,7 @@ namespace cryptonote
     fee = 0;
     
     //baseline empty block
-    sevabit_block_reward_context block_reward_context = {};
+    quorax_block_reward_context block_reward_context = {};
     block_reward_context.height                    = height;
     if (!m_blockchain.calc_batched_governance_reward(height, block_reward_context.batched_governance))
     {
@@ -1335,7 +1335,7 @@ namespace cryptonote
     }
 
     block_reward_parts reward_parts = {};
-    get_sevabit_block_reward(median_weight, total_weight, already_generated_coins, version, reward_parts, block_reward_context);
+    get_quorax_block_reward(median_weight, total_weight, already_generated_coins, version, reward_parts, block_reward_context);
     best_coinbase = reward_parts.base_miner;
 
     size_t max_total_weight = 2 * median_weight - CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE;
@@ -1368,7 +1368,7 @@ namespace cryptonote
       {
         // If we're getting lower coinbase tx, stop including more tx
         block_reward_parts reward_parts_other = {};
-        if(!get_sevabit_block_reward(median_weight, total_weight + meta.weight, already_generated_coins, version, reward_parts_other, block_reward_context))
+        if(!get_quorax_block_reward(median_weight, total_weight + meta.weight, already_generated_coins, version, reward_parts_other, block_reward_context))
         {
           LOG_PRINT_L2("  would exceed maximum block weight");
           continue;

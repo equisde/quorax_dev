@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Sevabit Project
+// Copyright (c) 2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -82,7 +82,7 @@ namespace super_nodes
                     const super_nodes::quorum_state &quorum_state,
                     cryptonote::transaction &tx);
 
-      // TODO(sevabit): Review relay behaviour and all the cases when it should be triggered
+      // TODO(quorax): Review relay behaviour and all the cases when it should be triggered
       void                         set_relayed         (const std::vector<deregister_vote>& votes);
       void                         remove_expired_votes(uint64_t height);
       void                         remove_used_votes   (std::vector<cryptonote::transaction> const &txs);

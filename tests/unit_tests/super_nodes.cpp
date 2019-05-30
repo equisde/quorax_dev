@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Sevabit Project
+// Copyright (c) 2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -36,7 +36,7 @@
 
 TEST(super_nodes, staking_requirement)
 {
-  // TODO(sevabit): The current reference values here for the staking requirement
+  // TODO(quorax): The current reference values here for the staking requirement
   // at certain heights has been derived from excel, so we have to use an
   // epsilon for dust amounts as amounts are off by a bit. When we switch to
   // integer math we can remove the need for this. Doyle - 2018-08-28

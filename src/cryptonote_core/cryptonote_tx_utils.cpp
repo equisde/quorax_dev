@@ -235,7 +235,7 @@ namespace cryptonote
     return reward;
   }
 
-  sevabit_miner_tx_context::sevabit_miner_tx_context(network_type type, crypto::public_key const &winner, std::vector<std::pair<account_public_address, stake_portions>> const &winner_info)
+  quorax_miner_tx_context::quorax_miner_tx_context(network_type type, crypto::public_key const &winner, std::vector<std::pair<account_public_address, stake_portions>> const &winner_info)
     : nettype(type)
     , snode_winner_key(winner)
     , snode_winner_info(winner_info)
@@ -253,7 +253,7 @@ namespace cryptonote
       transaction& tx,
       const blobdata& extra_nonce,
       uint8_t hard_fork_version,
-      const sevabit_miner_tx_context &miner_tx_context)
+      const quorax_miner_tx_context &miner_tx_context)
   {
     tx.vin.clear();
     tx.vout.clear();
@@ -287,14 +287,14 @@ namespace cryptonote
     txin_gen in;
     in.height = height;
 
-    sevabit_block_reward_context block_reward_context = {};
+    quorax_block_reward_context block_reward_context = {};
     block_reward_context.fee                       = fee;
     block_reward_context.height                    = height;
     block_reward_context.snode_winner_info         = miner_tx_context.snode_winner_info;
     block_reward_context.batched_governance        = miner_tx_context.batched_governance;
 
     block_reward_parts reward_parts;
-    if(!get_sevabit_block_reward(median_weight, current_block_weight, already_generated_coins, hard_fork_version, reward_parts, block_reward_context))
+    if(!get_quorax_block_reward(median_weight, current_block_weight, already_generated_coins, hard_fork_version, reward_parts, block_reward_context))
     {
       LOG_PRINT_L0("Failed to calculate block reward");
       return false;
@@ -391,11 +391,11 @@ namespace cryptonote
     return true;
   }
 
-  bool get_sevabit_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const sevabit_block_reward_context &sevabit_context)
+  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context)
   {
     result = {};
     uint64_t base_reward;
-    if (!get_base_block_reward(median_weight, current_block_weight, already_generated_coins, base_reward, hard_fork_version, sevabit_context.height))
+    if (!get_base_block_reward(median_weight, current_block_weight, already_generated_coins, base_reward, hard_fork_version, quorax_context.height))
     {
       MERROR("Failed to calculate base block reward");
       return false;
@@ -416,8 +416,8 @@ namespace cryptonote
     //TODO: declining governance reward schedule
     result.original_base_reward = base_reward;
     result.super_node_total   = super_node_reward_formula(base_reward, hard_fork_version);
-    if (sevabit_context.snode_winner_info.empty()) result.super_node_paid = calculate_sum_of_portions(super_nodes::null_winner,     result.super_node_total);
-    else                                        result.super_node_paid = calculate_sum_of_portions(sevabit_context.snode_winner_info, result.super_node_total);
+    if (quorax_context.snode_winner_info.empty()) result.super_node_paid = calculate_sum_of_portions(super_nodes::null_winner,     result.super_node_total);
+    else                                        result.super_node_paid = calculate_sum_of_portions(quorax_context.snode_winner_info, result.super_node_total);
 
     result.adjusted_base_reward = result.original_base_reward;
     if (hard_fork_version >= network_version_10_bulletproofs)
@@ -426,7 +426,7 @@ namespace cryptonote
       // reward as they are not included and batched into a later block. If we
       // calculated a (governance reward > 0), then this is the batched height,
       // add it to the adjusted base reward afterwards
-      result.governance            = sevabit_context.batched_governance;
+      result.governance            = quorax_context.batched_governance;
       result.adjusted_base_reward -= governance_reward_formula(result.original_base_reward);
 
       if (result.governance > 0)
@@ -438,7 +438,7 @@ namespace cryptonote
     }
 
     result.base_miner     = result.adjusted_base_reward - (result.governance + result.super_node_paid);
-    result.base_miner_fee = sevabit_context.fee;
+    result.base_miner_fee = quorax_context.fee;
     return true;
   }
 
@@ -468,7 +468,7 @@ namespace cryptonote
     return addr.m_view_public_key;
   }
   //---------------------------------------------------------------
-  bool construct_tx_with_tx_key(const account_keys& sender_account_keys, const std::unordered_map<crypto::public_key, subaddress_index>& subaddresses, std::vector<tx_source_entry>& sources, std::vector<tx_destination_entry>& destinations, const boost::optional<tx_destination_entry>& change_addr, const std::vector<uint8_t> &extra, transaction& tx, uint64_t unlock_time, const crypto::secret_key &tx_key, const std::vector<crypto::secret_key> &additional_tx_keys, const rct::RCTConfig &rct_config, rct::multisig_out *msout, bool shuffle_outs, const sevabit_construct_tx_params tx_params)
+  bool construct_tx_with_tx_key(const account_keys& sender_account_keys, const std::unordered_map<crypto::public_key, subaddress_index>& subaddresses, std::vector<tx_source_entry>& sources, std::vector<tx_destination_entry>& destinations, const boost::optional<tx_destination_entry>& change_addr, const std::vector<uint8_t> &extra, transaction& tx, uint64_t unlock_time, const crypto::secret_key &tx_key, const std::vector<crypto::secret_key> &additional_tx_keys, const rct::RCTConfig &rct_config, rct::multisig_out *msout, bool shuffle_outs, const quorax_construct_tx_params tx_params)
   {
     hw::device &hwdev = sender_account_keys.get_device();
 
@@ -731,8 +731,8 @@ namespace cryptonote
       if (tx_params.v3_is_staking_tx)
       {
         CHECK_AND_ASSERT_MES(dst_entr.addr == sender_account_keys.m_account_address, false, "A staking contribution must return back to the original sendee otherwise the pre-calculated key image is incorrect");
-        CHECK_AND_ASSERT_MES(dst_entr.is_subaddress == false, false, "Staking back to a subaddress is not allowed"); // TODO(sevabit): Maybe one day, revisit this
-        CHECK_AND_ASSERT_MES(need_additional_txkeys == false, false, "Staking TX's can not required additional TX Keys"); // TODO(sevabit): Maybe one day, revisit this
+        CHECK_AND_ASSERT_MES(dst_entr.is_subaddress == false, false, "Staking back to a subaddress is not allowed"); // TODO(quorax): Maybe one day, revisit this
+        CHECK_AND_ASSERT_MES(need_additional_txkeys == false, false, "Staking TX's can not required additional TX Keys"); // TODO(quorax): Maybe one day, revisit this
 
         if (!(change_addr && *change_addr == dst_entr))
         {
@@ -952,7 +952,7 @@ namespace cryptonote
     return true;
   }
   //---------------------------------------------------------------
-  bool construct_tx_and_get_tx_key(const account_keys& sender_account_keys, const std::unordered_map<crypto::public_key, subaddress_index>& subaddresses, std::vector<tx_source_entry>& sources, std::vector<tx_destination_entry>& destinations, const boost::optional<cryptonote::tx_destination_entry>& change_addr, const std::vector<uint8_t> &extra, transaction& tx, uint64_t unlock_time, crypto::secret_key &tx_key, std::vector<crypto::secret_key> &additional_tx_keys, const rct::RCTConfig &rct_config, rct::multisig_out *msout, sevabit_construct_tx_params const tx_params)
+  bool construct_tx_and_get_tx_key(const account_keys& sender_account_keys, const std::unordered_map<crypto::public_key, subaddress_index>& subaddresses, std::vector<tx_source_entry>& sources, std::vector<tx_destination_entry>& destinations, const boost::optional<cryptonote::tx_destination_entry>& change_addr, const std::vector<uint8_t> &extra, transaction& tx, uint64_t unlock_time, crypto::secret_key &tx_key, std::vector<crypto::secret_key> &additional_tx_keys, const rct::RCTConfig &rct_config, rct::multisig_out *msout, quorax_construct_tx_params const tx_params)
   {
     hw::device &hwdev = sender_account_keys.get_device();
     hwdev.open_tx(tx_key);
@@ -987,7 +987,7 @@ namespace cryptonote
      rct_config.range_proof_type  = (hf_version < network_version_10_bulletproofs) ?  rct::RangeProofBorromean : rct::RangeProofPaddedBulletproof;
      rct_config.bp_version        = (hf_version < HF_VERSION_SMALLER_BP) ? 1 : 0;
 
-     sevabit_construct_tx_params tx_params(hf_version);
+     quorax_construct_tx_params tx_params(hf_version);
      tx_params.v3_is_staking_tx = is_staking;
 
      return construct_tx_and_get_tx_key(sender_account_keys, subaddresses, sources, destinations_copy, change_addr, extra, tx, unlock_time, tx_key, additional_tx_keys, rct_config, NULL, tx_params);

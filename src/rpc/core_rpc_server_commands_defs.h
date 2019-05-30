@@ -999,7 +999,7 @@ namespace cryptonote
 
     struct response
     {
-      std::vector<std::string> keys; // NOTE: Returns as base32z of the hex key, for Sevabitnet internal usage
+      std::vector<std::string> keys; // NOTE: Returns as base32z of the hex key, for QuoraXnet internal usage
       BEGIN_KV_SERIALIZE_MAP()
         KV_SERIALIZE(keys)
       END_KV_SERIALIZE_MAP()
@@ -2423,7 +2423,7 @@ namespace cryptonote
   };
 
   //
-  // Sevabit
+  // QuoraX
   //
   struct COMMAND_RPC_GET_QUORUM_STATE
   {

@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -54,9 +54,9 @@ if (BERKELEY_DB)
   )
 endif()
 
-sevabit_private_headers(blockchain_db
+quorax_private_headers(blockchain_db
   ${crypto_private_headers})
-sevabit_add_library(blockchain_db
+quorax_add_library(blockchain_db
   ${blockchain_db_sources}
   ${blockchain_db_headers}
   ${blockchain_db_private_headers})

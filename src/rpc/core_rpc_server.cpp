@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -1023,7 +1023,7 @@ namespace cryptonote
   //------------------------------------------------------------------------------------------------------------------------------
 
   //
-  // Sevabit
+  // QuoraX
   //
   bool core_rpc_server::on_get_output_blacklist_bin(const COMMAND_RPC_GET_OUTPUT_BLACKLIST::request& req, COMMAND_RPC_GET_OUTPUT_BLACKLIST::response& res, const connection_context *ctx)
   {
@@ -2057,7 +2057,7 @@ namespace cryptonote
   bool core_rpc_server::on_update(const COMMAND_RPC_UPDATE::request& req, COMMAND_RPC_UPDATE::response& res, const connection_context *ctx)
   {
     PERF_TIMER(on_update);
-    static const char software[] = "sevabit";
+    static const char software[] = "quorax";
 #ifdef BUILD_TAG
     static const char buildtag[] = BOOST_PP_STRINGIZE(BUILD_TAG);
     static const char subdir[] = "cli";
@@ -2392,7 +2392,7 @@ namespace cryptonote
     };
 
   //
-  // Sevabit
+  // QuoraX
   //
   bool core_rpc_server::on_get_quorum_state(const COMMAND_RPC_GET_QUORUM_STATE::request& req, COMMAND_RPC_GET_QUORUM_STATE::response& res, epee::json_rpc::error& error_resp, const connection_context *ctx)
   {
@@ -2606,7 +2606,7 @@ namespace cryptonote
     for (const auto& key : keys)
     {
       std::string const hex64 = string_tools::pod_to_hex(key);
-      res.keys[i++]           = sevabit::hex64_to_base32z(hex64);
+      res.keys[i++]           = quorax::hex64_to_base32z(hex64);
     }
     return true;
   }

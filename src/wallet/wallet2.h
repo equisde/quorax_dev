@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -396,7 +396,7 @@ namespace tools
       std::vector<cryptonote::tx_destination_entry> m_dests;
       crypto::hash m_payment_id;
       uint64_t m_timestamp;
-      uint64_t m_unlock_time; // NOTE(sevabit): Not used after TX v2.
+      uint64_t m_unlock_time; // NOTE(quorax): Not used after TX v2.
       std::vector<uint64_t> m_unlock_times;
       uint32_t m_subaddr_account;   // subaddress account of your wallet to be used in this transfer
       std::set<uint32_t> m_subaddr_indices;  // set of address indices used as inputs in this transfer
@@ -864,7 +864,7 @@ namespace tools
     void get_unconfirmed_payments_out(std::list<std::pair<crypto::hash,wallet2::unconfirmed_transfer_details>>& unconfirmed_payments, const boost::optional<uint32_t>& subaddr_account = boost::none, const std::set<uint32_t>& subaddr_indices = {}) const;
     void get_unconfirmed_payments(std::list<std::pair<crypto::hash,wallet2::pool_payment_details>>& unconfirmed_payments, const boost::optional<uint32_t>& subaddr_account = boost::none, const std::set<uint32_t>& subaddr_indices = {}) const;
 
-    // NOTE(sevabit): get_all_super_node caches the result, get_super_nodes doesn't
+    // NOTE(quorax): get_all_super_node caches the result, get_super_nodes doesn't
     std::vector<cryptonote::COMMAND_RPC_GET_SUPER_NODES::response::entry> get_all_super_nodes(boost::optional<std::string> &failed)                                          const { return m_node_rpc_proxy.get_all_super_nodes(failed); }
     std::vector<cryptonote::COMMAND_RPC_GET_SUPER_NODES::response::entry> get_super_nodes    (std::vector<std::string> const &pubkeys, boost::optional<std::string> &failed) const { return m_node_rpc_proxy.get_super_nodes(pubkeys, failed); }
     std::vector<cryptonote::COMMAND_RPC_GET_SUPER_NODE_BLACKLISTED_KEY_IMAGES::entry> get_super_node_blacklisted_key_images(boost::optional<std::string> &failed)            const { return m_node_rpc_proxy.get_super_node_blacklisted_key_images(failed); }
@@ -1588,13 +1588,13 @@ namespace tools
     std::unique_ptr<wallet_device_callback> m_device_callback;
   };
 
-  // TODO(sevabit): Hmm. We need this here because we make register_super_node do
+  // TODO(quorax): Hmm. We need this here because we make register_super_node do
   // parsing on the wallet2 side instead of simplewallet. This is so that
   // register_super_node RPC command doesn't make it the wallet_rpc's
   // responsibility to parse out the string returned from the daemon. We're
   // purposely abstracting that complexity out to just wallet2's responsibility.
 
-  // TODO(sevabit): The better question is if anyone is ever going to try use
+  // TODO(quorax): The better question is if anyone is ever going to try use
   // register super node funded by multiple subaddresses. This is unlikely.
   extern const std::array<const char* const, 5> allowed_priority_strings;
   bool parse_subaddress_indices(const std::string& arg, std::set<uint32_t>& subaddr_indices, std::string *err_msg = nullptr);

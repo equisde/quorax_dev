@@ -1,7 +1,7 @@
-# Sevabit Blockchain Utilities
+# QuoraX Blockchain Utilities
 
 Copyright (c) 2014-2018, The Monero Project
-Copyright (c)      2018, The Sevabit Project
+Copyright (c)      2018, The QuoraX Project
 
 ## Introduction
 
@@ -13,16 +13,16 @@ See also each utility's "--help" option.
 
 ### Export an existing blockchain database
 
-`$ sevabit-blockchain-export`
+`$ quorax-blockchain-export`
 
 This loads the existing blockchain and exports it to `$SEVABIT_DATA_DIR/export/blockchain.raw`
 
 ### Import the exported file
 
-`$ sevabit-blockchain-import`
+`$ quorax-blockchain-import`
 
 This imports blocks from `$SEVABIT_DATA_DIR/export/blockchain.raw` (exported using the
-`sevabit-blockchain-export` tool as described above) into the current database.
+`quorax-blockchain-export` tool as described above) into the current database.
 
 Defaults: `--batch on`, `--batch size 20000`, `--verify on`
 
@@ -31,14 +31,14 @@ Batch size refers to number of blocks and can be adjusted for performance based 
 Verification should only be turned off if importing from a trusted blockchain.
 
 If you encounter an error like "resizing not supported in batch mode", you can just re-run
-the `sevabit-blockchain-import` command again, and it will restart from where it left off.
+the `quorax-blockchain-import` command again, and it will restart from where it left off.
 
 ```bash
 ## use default settings to import blockchain.raw into database
-$ sevabit-blockchain-import
+$ quorax-blockchain-import
 
 ## fast import with large batch size, database mode "fastest", verification off
-$ sevabit-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
+$ quorax-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
 
 ```
 
@@ -81,9 +81,9 @@ LMDB flags (more than one may be specified):
 ## Examples:
 
 ```
-$ sevabit-blockchain-import --database lmdb#fastest
+$ quorax-blockchain-import --database lmdb#fastest
 
-$ sevabit-blockchain-import --database lmdb#nosync
+$ quorax-blockchain-import --database lmdb#nosync
 
-$ sevabit-blockchain-import --database lmdb#nosync,nometasync
+$ quorax-blockchain-import --database lmdb#nosync,nometasync
 ```

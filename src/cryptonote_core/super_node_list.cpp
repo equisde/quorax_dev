@@ -1,4 +1,4 @@
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -322,7 +322,7 @@ namespace super_nodes
 
     if (!state)
     {
-      // TODO(sevabit): Not being able to find a quorum is fatal! We want better caching abilities.
+      // TODO(quorax): Not being able to find a quorum is fatal! We want better caching abilities.
       MERROR("Quorum state for height: " << deregister.block_height << ", was not stored by the daemon");
       return false;
     }
@@ -414,7 +414,7 @@ namespace super_nodes
     auto all_swarms = get_all_swarms(swarm_to_snodes);
     std::sort(all_swarms.begin(), all_swarms.end());
 
-    sevabit_shuffle(all_swarms, seed);
+    quorax_shuffle(all_swarms, seed);
 
     const auto cmp_swarm_sizes =
       [&swarm_to_snodes](swarm_id_t lhs, swarm_id_t rhs) {
@@ -491,7 +491,7 @@ namespace super_nodes
       /// shuffle the queue and select MAX_SWARM_SIZE last elements
       const auto new_swarm_id = get_new_swarm_id(mersenne_twister, all_swarms);
 
-      sevabit_shuffle(swarm_buffer, seed + new_swarm_id);
+      quorax_shuffle(swarm_buffer, seed + new_swarm_id);
 
       std::vector<crypto::public_key> selected_snodes;
 
@@ -807,7 +807,7 @@ namespace super_nodes
     int hard_fork_version = m_blockchain.get_hard_fork_version(block_height);
     if (hard_fork_version >= cryptonote::network_version_11_infinite_staking)
     {
-      // NOTE(sevabit): Grace period is not used anymore with infinite staking. So, if someone somehow reregisters, we just ignore it
+      // NOTE(quorax): Grace period is not used anymore with infinite staking. So, if someone somehow reregisters, we just ignore it
       const auto iter = m_transient_state.super_nodes_infos.find(key);
       if (iter != m_transient_state.super_nodes_infos.end())
         return false;
@@ -1142,7 +1142,7 @@ namespace super_nodes
             if (unlock.key_image != locked_contribution->key_image)
               continue;
 
-            // NOTE(sevabit): This should be checked in blockchain check_tx_inputs already
+            // NOTE(quorax): This should be checked in blockchain check_tx_inputs already
             crypto::hash const hash = super_nodes::generate_request_stake_unlock_hash(unlock.nonce);
             if (!crypto::check_signature(hash, locked_contribution->key_image_pub_key, unlock.signature))
             {
@@ -1262,7 +1262,7 @@ namespace super_nodes
     std::vector<crypto::public_key> expired_nodes;
     uint64_t const lock_blocks = staking_num_lock_blocks(m_blockchain.nettype());
 
-    // TODO(sevabit): This should really use the registration height instead of getting the block and expiring nodes.
+    // TODO(quorax): This should really use the registration height instead of getting the block and expiring nodes.
     // But there's something subtly off when using registration height causing syncing problems.
     if (m_blockchain.get_hard_fork_version(block_height) == cryptonote::network_version_9_super_nodes)
     {
@@ -1379,7 +1379,7 @@ namespace super_nodes
     if (hard_fork_version < 9)
       return true;
 
-    // NOTE(sevabit): Super node reward distribution is calculated from the
+    // NOTE(quorax): Super node reward distribution is calculated from the
     // original amount, i.e. 50% of the original base reward goes to super
     // nodes not 50% of the reward after removing the governance component (the
     // adjusted base reward post hardfork 10).
@@ -1434,7 +1434,7 @@ namespace super_nodes
   }
 
   template<typename T>
-  void sevabit_shuffle(std::vector<T>& a, uint64_t seed)
+  void quorax_shuffle(std::vector<T>& a, uint64_t seed)
   {
     if (a.size() <= 1) return;
     std::mt19937_64 mersenne_twister(seed);
@@ -1465,7 +1465,7 @@ namespace super_nodes
       uint64_t seed = 0;
       std::memcpy(&seed, block_hash.data, std::min(sizeof(seed), sizeof(block_hash.data)));
 
-      sevabit_shuffle(pub_keys_indexes, seed);
+      quorax_shuffle(pub_keys_indexes, seed);
     }
 
     // Assign indexes from shuffled list into quorum and list of nodes to test
@@ -1799,7 +1799,7 @@ namespace super_nodes
     }
 
     //
-    // FIXME(doyle): FIXME(sevabit) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // FIXME(doyle): FIXME(quorax) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // This is temporary code to redistribute the insufficient portion dust
     // amounts between contributors. It should be removed in HF12.
     //
@@ -1807,13 +1807,13 @@ namespace super_nodes
     std::array<uint64_t, MAX_NUMBER_OF_CONTRIBUTORS * super_nodes::MAX_KEY_IMAGES_PER_CONTRIBUTOR> min_contributions;
     {
       // NOTE: Calculate excess portions from each contributor
-      uint64_t sevabit_reserved = 0;
+      uint64_t quorax_reserved = 0;
       for (size_t index = 0; index < addr_to_portions.size(); ++index)
       {
         addr_to_portion_t const &addr_to_portion = addr_to_portions[index];
-        uint64_t min_contribution_portions       = super_nodes::get_min_node_contribution_in_portions(hf_version, staking_requirement, sevabit_reserved, index);
-        uint64_t sevabit_amount                     = super_nodes::portions_to_amount(staking_requirement, addr_to_portion.portions);
-        sevabit_reserved                           += sevabit_amount;
+        uint64_t min_contribution_portions       = super_nodes::get_min_node_contribution_in_portions(hf_version, staking_requirement, quorax_reserved, index);
+        uint64_t quorax_amount                     = super_nodes::portions_to_amount(staking_requirement, addr_to_portion.portions);
+        quorax_reserved                           += quorax_amount;
 
         uint64_t excess = 0;
         if (addr_to_portion.portions > min_contribution_portions)
@@ -1882,8 +1882,8 @@ namespace super_nodes
       portions_left += portions_to_steal;
       result.addresses.push_back(addr_to_portion.info.address);
       result.portions.push_back(addr_to_portion.portions);
-      uint64_t sevabit_amount = super_nodes::portions_to_amount(addr_to_portion.portions, staking_requirement);
-      total_reserved      += sevabit_amount;
+      uint64_t quorax_amount = super_nodes::portions_to_amount(addr_to_portion.portions, staking_requirement);
+      total_reserved      += quorax_amount;
     }
 
     result.success = true;

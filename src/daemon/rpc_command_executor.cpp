@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -62,8 +62,8 @@ namespace {
     std::cout << prompt << std::flush;
     std::string result;
 #if defined (SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-    sevabit::write_redirected_stdout_to_shared_mem();
-    sevabit::fixed_buffer buffer = sevabit::read_from_stdin_shared_mem();
+    quorax::write_redirected_stdout_to_shared_mem();
+    quorax::fixed_buffer buffer = quorax::read_from_stdin_shared_mem();
     result.reserve(buffer.len);
     result = buffer.data;
 #else
@@ -1280,8 +1280,8 @@ bool t_rpc_command_executor::stop_daemon()
 //# ifdef WIN32
 //    // Stop via service API
 //    // TODO - this is only temporary!  Get rid of hard-coded constants!
-//    bool ok = windows::stop_service("Sevabit Daemon");
-//    ok = windows::uninstall_service("Sevabit Daemon");
+//    bool ok = windows::stop_service("QuoraX Daemon");
+//    ok = windows::uninstall_service("QuoraX Daemon");
 //    //bool ok = windows::stop_service(SERVICE_NAME);
 //    //ok = windows::uninstall_service(SERVICE_NAME);
 //    if (ok)
@@ -1325,10 +1325,10 @@ bool t_rpc_command_executor::print_status()
   bool daemon_is_alive = m_rpc_client->check_connection();
 
   if(daemon_is_alive) {
-    tools::success_msg_writer() << "sevabitd is running";
+    tools::success_msg_writer() << "quoraxd is running";
   }
   else {
-    tools::fail_msg_writer() << "sevabitd is NOT running";
+    tools::fail_msg_writer() << "quoraxd is NOT running";
   }
 
   return true;
@@ -2819,7 +2819,7 @@ bool t_rpc_command_executor::prepare_registration()
       case register_step::is_solo_stake__operator_address_to_reserve:
       {
         std::string address_str;
-        last_input_result = input_line_back_cancel_get_input("Enter the sevabit address for the solo staker", address_str);
+        last_input_result = input_line_back_cancel_get_input("Enter the quorax address for the solo staker", address_str);
         if (last_input_result == input_line_result::back)
           continue;
 
@@ -2924,7 +2924,7 @@ bool t_rpc_command_executor::prepare_registration()
       case register_step::is_open_stake__operator_address_to_reserve:
       {
         std::string address_str;
-        last_input_result = input_line_back_cancel_get_input("Enter the sevabit address for the operator", address_str);
+        last_input_result = input_line_back_cancel_get_input("Enter the quorax address for the operator", address_str);
         if (last_input_result == input_line_result::back)
           continue;
 
@@ -2948,7 +2948,7 @@ bool t_rpc_command_executor::prepare_registration()
         std::cout << "Minimum amount that can be reserved: " << cryptonote::print_money(min_contribution) << " " << cryptonote::get_unit() << std::endl;
 
         std::string contribution_str;
-        last_input_result = input_line_back_cancel_get_input("How much sevabit does the operator want to reserve in the stake?", contribution_str);
+        last_input_result = input_line_back_cancel_get_input("How much quorax does the operator want to reserve in the stake?", contribution_str);
         if (last_input_result == input_line_result::back)
           continue;
 
@@ -2999,7 +2999,7 @@ bool t_rpc_command_executor::prepare_registration()
 
       case register_step::is_open_stake__contributor_address_to_reserve:
       {
-        std::string const prompt = "Enter the sevabit address for contributor " + std::to_string(state.contributions.size() + 1);
+        std::string const prompt = "Enter the quorax address for contributor " + std::to_string(state.contributions.size() + 1);
         std::string address_str;
         last_input_result = input_line_back_cancel_get_input(prompt.c_str(), address_str);
         if (last_input_result == input_line_result::back)
@@ -3029,7 +3029,7 @@ bool t_rpc_command_executor::prepare_registration()
         std::cout << "There is " << cryptonote::print_money(amount_left) << " " << cryptonote::get_unit() << " left to meet the staking requirement." << std::endl;
 
         std::string contribution_str;
-        std::string const prompt = "How much sevabit does contributor " + std::to_string(state.contributions.size() + 1) + " want to reserve in the stake?";
+        std::string const prompt = "How much quorax does contributor " + std::to_string(state.contributions.size() + 1) + " want to reserve in the stake?";
         last_input_result        = input_line_back_cancel_get_input(prompt.c_str(), contribution_str);
         if (last_input_result == input_line_result::back)
           continue;

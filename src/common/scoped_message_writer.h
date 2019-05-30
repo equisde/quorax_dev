@@ -68,7 +68,7 @@ public:
     , m_log_level(log_level)
   {
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-    m_color = epee::console_color_default; // NOTE(sevabit): No ANSI color codes in the output. Makes parsing harder.
+    m_color = epee::console_color_default; // NOTE(quorax): No ANSI color codes in the output. Makes parsing harder.
 #endif
     m_oss << prefix;
   }

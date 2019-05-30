@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -2340,7 +2340,7 @@ namespace wallet_rpc
         KV_SERIALIZE_OPT(allow_openalias, false)
       END_KV_SERIALIZE_MAP()
     };
-    // TODO(doyle): FIXME(sevabit): When the associated commit from upstream Monero is merged
+    // TODO(doyle): FIXME(quorax): When the associated commit from upstream Monero is merged
     // typedef epee::misc_utils::struct_init<request_t> request;
 
     struct response

@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
@@ -60,10 +60,10 @@ endif()
 set(device_private_headers)
 
 
-sevabit_private_headers(device
+quorax_private_headers(device
   ${device_private_headers})
 
-sevabit_add_library(device
+quorax_add_library(device
   ${device_sources}
   ${device_headers}
   ${device_private_headers})

@@ -213,7 +213,7 @@ namespace cryptonote
       FIELD(extra)
       if (version >= version_4_tx_types)
       {
-        VARINT_FIELD(type) // NOTE(sevabit): Overwrites is_deregister
+        VARINT_FIELD(type) // NOTE(quorax): Overwrites is_deregister
         if (static_cast<uint16_t>(type) >= type_count) return false;
       }
     END_SERIALIZE()
@@ -538,7 +538,7 @@ namespace cryptonote
   inline enum transaction_prefix::version transaction_prefix::get_min_version_for_hf(int hf_version, cryptonote::network_type nettype)
   {
     nettype = validate_nettype(nettype);
-    if (nettype == MAINNET) // NOTE(sevabit): Add an exception for mainnet as there are v2's on mainnet.
+    if (nettype == MAINNET) // NOTE(quorax): Add an exception for mainnet as there are v2's on mainnet.
     {
       if (hf_version == cryptonote::network_version_10_bulletproofs)
         return transaction::version_2;
@@ -564,7 +564,7 @@ namespace cryptonote
       return type_standard;
     }
 
-    // NOTE(sevabit): Type is range checked on deserialisation, so hitting this is a developer error
+    // NOTE(quorax): Type is range checked on deserialisation, so hitting this is a developer error
     assert(static_cast<uint16_t>(type) < static_cast<uint16_t>(type_count));
     return static_cast<transaction::type_t>(type);
   }
@@ -587,7 +587,7 @@ namespace cryptonote
 
     if (result)
     {
-      assert(static_cast<uint16_t>(new_type) <= static_cast<uint16_t>(type_count)); // NOTE(sevabit): Developer error
+      assert(static_cast<uint16_t>(new_type) <= static_cast<uint16_t>(type_count)); // NOTE(quorax): Developer error
       type = static_cast<uint16_t>(new_type);
     }
 

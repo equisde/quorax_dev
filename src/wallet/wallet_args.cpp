@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -130,10 +130,10 @@ namespace wallet_args
     command_line::add_arg(desc_params, arg_config_file);
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-    command_line::add_arg(desc_params, sevabit::arg_integration_test_shared_mem_name);
+    command_line::add_arg(desc_params, quorax::arg_integration_test_shared_mem_name);
 #endif
 
-    i18n_set_language("translations", "sevabit", lang);
+    i18n_set_language("translations", "quorax", lang);
 
     po::options_description desc_all;
     desc_all.add(desc_general).add(desc_params);
@@ -146,15 +146,15 @@ namespace wallet_args
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
       {
-        const std::string arg_shared_mem_name = command_line::get_arg(vm, sevabit::arg_integration_test_shared_mem_name);
-        sevabit::init_integration_test_context(arg_shared_mem_name);
+        const std::string arg_shared_mem_name = command_line::get_arg(vm, quorax::arg_integration_test_shared_mem_name);
+        quorax::init_integration_test_context(arg_shared_mem_name);
       }
 #endif
 
       if (command_line::get_arg(vm, command_line::arg_help))
       {
-        Print(print) << "Sevabit '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")" << ENDL;
-        Print(print) << wallet_args::tr("This is the command line sevabit wallet. It needs to connect to a sevabit\n"
+        Print(print) << "QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")" << ENDL;
+        Print(print) << wallet_args::tr("This is the command line quorax wallet. It needs to connect to a quorax\n"
 												  "daemon to work correctly.") << ENDL;
         Print(print) << wallet_args::tr("Usage:") << ENDL << "  " << usage;
         Print(print) << desc_all;
@@ -163,7 +163,7 @@ namespace wallet_args
       }
       else if (command_line::get_arg(vm, command_line::arg_version))
       {
-        Print(print) << "Sevabit '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")";
+        Print(print) << "QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")";
         should_terminate = true;
         return true;
       }
@@ -214,7 +214,7 @@ namespace wallet_args
     if (!command_line::is_arg_defaulted(vm, arg_max_concurrency))
       tools::set_max_concurrency(command_line::get_arg(vm, arg_max_concurrency));
 
-    Print(print) << "Sevabit '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")";
+    Print(print) << "QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")";
 
     if (!command_line::is_arg_defaulted(vm, arg_log_level))
       MINFO("Setting log level = " << command_line::get_arg(vm, arg_log_level));

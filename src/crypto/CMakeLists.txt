@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -78,9 +78,9 @@ set(crypto_private_headers
   coin_algos.hpp
   cn_heavy_hash.hpp)
 
-sevabit_private_headers(cncrypto
+quorax_private_headers(cncrypto
   ${crypto_private_headers})
-sevabit_add_library(cncrypto
+quorax_add_library(cncrypto
   ${crypto_sources}
   ${crypto_headers}
   ${crypto_private_headers})

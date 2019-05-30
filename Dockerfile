@@ -197,14 +197,14 @@ RUN set -ex && \
 COPY --from=builder /src/build/release/bin /usr/local/bin/
 
 # Contains the blockchain
-VOLUME /root/.sevabit
+VOLUME /root/.quorax
 
 # Generate your wallet via accessing the container and run:
 # cd /wallet
-# sevabit-wallet-cli
+# quorax-wallet-cli
 VOLUME /wallet
 
 EXPOSE 22022
 EXPOSE 22023
 
-ENTRYPOINT ["sevabitd", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=22022", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=22023", "--non-interactive", "--confirm-external-bind"]
+ENTRYPOINT ["quoraxd", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=22022", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=22023", "--non-interactive", "--confirm-external-bind"]

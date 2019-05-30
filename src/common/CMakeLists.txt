@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -93,9 +93,9 @@ set(common_private_headers
   aligned.h
   combinator.h)
 
-sevabit_private_headers(common
+quorax_private_headers(common
   ${common_private_headers})
-sevabit_add_library(common
+quorax_add_library(common
   ${common_sources}
   ${common_headers}
   ${common_private_headers}

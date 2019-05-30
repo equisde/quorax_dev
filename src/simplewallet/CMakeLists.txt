@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.
@@ -35,9 +35,9 @@ set(simplewallet_headers)
 set(simplewallet_private_headers
   simplewallet.h)
 
-sevabit_private_headers(simplewallet
+quorax_private_headers(simplewallet
   ${simplewallet_private_headers})
-sevabit_add_executable(simplewallet
+quorax_add_executable(simplewallet
   ${simplewallet_sources}
   ${simplewallet_headers}
   ${simplewallet_private_headers})
@@ -63,5 +63,5 @@ target_link_libraries(simplewallet
     ${EXTRA_LIBRARIES})
 set_property(TARGET simplewallet
   PROPERTY
-    OUTPUT_NAME "sevabit-wallet-cli")
+    OUTPUT_NAME "quorax-wallet-cli")
 install(TARGETS simplewallet DESTINATION bin)

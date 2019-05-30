@@ -1,4 +1,4 @@
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 //
 // All rights reserved.
 //
@@ -107,7 +107,7 @@ namespace super_nodes
       const std::shared_ptr<const quorum_state> state = m_core.get_quorum_state(m_last_height);
       if (!state)
       {
-        // TODO(sevabit): Fatal error
+        // TODO(quorax): Fatal error
         LOG_ERROR("Quorum state for height: " << m_last_height << "was not cached in daemon!");
         continue;
       }

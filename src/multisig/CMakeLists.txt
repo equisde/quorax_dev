@@ -1,4 +1,4 @@
-# Copyright (c) 2018, The Sevabit Project
+# Copyright (c) 2018, The QuoraX Project
 # Copyright (c) 2017-2018, The Monero Project
 #
 # All rights reserved.
@@ -35,10 +35,10 @@ set(multisig_headers)
 set(multisig_private_headers
   multisig.h)
 
-sevabit_private_headers(multisig
+quorax_private_headers(multisig
   ${multisig_private_headers})
 
-sevabit_add_library(multisig
+quorax_add_library(multisig
   ${multisig_sources}
   ${multisig_headers}
   ${multisig_private_headers})

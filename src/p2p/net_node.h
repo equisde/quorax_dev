@@ -136,7 +136,7 @@ namespace nodetool
   private:
     const std::vector<std::string> m_seed_nodes_list =
     {
-      // TODO(sevabit): "seeds.sevabit.network"
+      // TODO(quorax): "seeds.quorax.network"
     };
 
     bool islimitup=false;

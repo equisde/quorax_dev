@@ -22,12 +22,12 @@ uint64_t get_staking_requirement(cryptonote::network_type m_nettype, uint64_t he
   if (hf_version >= cryptonote::network_version_11_infinite_staking)
   {
     base     = 15000 * COIN;
-    variable = (25007.0 * COIN) / sevabit::exp2(height_adjusted/129600.0);
+    variable = (25007.0 * COIN) / quorax::exp2(height_adjusted/129600.0);
   }
   else
   {
     base      = 10000 * COIN;
-    variable  = (35000.0 * COIN) / sevabit::exp2(height_adjusted/129600.0);
+    variable  = (35000.0 * COIN) / quorax::exp2(height_adjusted/129600.0);
   }
 
   uint64_t result = base + variable;

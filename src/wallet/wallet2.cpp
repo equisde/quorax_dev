@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018, The Monero Project
-// Copyright (c)      2018, The Sevabit Project
+// Copyright (c)      2018, The QuoraX Project
 // 
 // All rights reserved.
 // 
@@ -104,9 +104,9 @@ using namespace cryptonote;
 #define CHACHA8_KEY_TAIL 0x8c
 #define CACHE_KEY_TAIL 0x8d
 
-#define UNSIGNED_TX_PREFIX "Sevabit unsigned tx set\004"
-#define SIGNED_TX_PREFIX "Sevabit signed tx set\004"
-#define MULTISIG_UNSIGNED_TX_PREFIX "Sevabit multisig unsigned tx set\001"
+#define UNSIGNED_TX_PREFIX "QuoraX unsigned tx set\004"
+#define SIGNED_TX_PREFIX "QuoraX signed tx set\004"
+#define MULTISIG_UNSIGNED_TX_PREFIX "QuoraX multisig unsigned tx set\001"
 
 #define RECENT_OUTPUT_RATIO (0.5) // 50% of outputs are from the recent zone
 #define RECENT_OUTPUT_DAYS (1.8) // last 1.8 day makes up the recent zone (taken from monerolink.pdf, Miller et al)
@@ -117,11 +117,11 @@ using namespace cryptonote;
 
 #define SECOND_OUTPUT_RELATEDNESS_THRESHOLD 0.0f
 
-#define KEY_IMAGE_EXPORT_FILE_MAGIC "Sevabit key image export\002"
+#define KEY_IMAGE_EXPORT_FILE_MAGIC "QuoraX key image export\002"
 
-#define MULTISIG_EXPORT_FILE_MAGIC "Sevabit multisig export\001"
+#define MULTISIG_EXPORT_FILE_MAGIC "QuoraX multisig export\001"
 
-#define OUTPUT_EXPORT_FILE_MAGIC "Sevabit output export\003"
+#define OUTPUT_EXPORT_FILE_MAGIC "QuoraX output export\003"
 
 #define SEGREGATION_FORK_HEIGHT 99999999
 #define TESTNET_SEGREGATION_FORK_HEIGHT 99999999
@@ -140,7 +140,7 @@ namespace
   std::string get_default_ringdb_path()
   {
     boost::filesystem::path dir = tools::get_default_data_dir();
-    // remove .sevabit, replace with .shared-ringdb
+    // remove .quorax, replace with .shared-ringdb
     dir = dir.remove_filename();
     dir /= ".shared-ringdb";
     return dir.string();
@@ -220,7 +220,7 @@ struct options {
   const command_line::arg_descriptor<bool> stagenet = {"stagenet", tools::wallet2::tr("For stagenet. Daemon must also be launched with --stagenet flag"), false};
 
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
-  const command_line::arg_descriptor<bool> fakenet = {"fakenet", tools::wallet2::tr("For sevabit integration tests, fakenet"), false};
+  const command_line::arg_descriptor<bool> fakenet = {"fakenet", tools::wallet2::tr("For quorax integration tests, fakenet"), false};
 #endif
 
   const command_line::arg_descriptor<std::string, false, true, 2> shared_ringdb_dir = {
@@ -288,7 +288,7 @@ std::unique_ptr<tools::wallet2> make_basic(const boost::program_options::variabl
 #if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
   if (command_line::get_arg(vm, opts.fakenet))
   {
-    assert(!testnet &&!stagenet); // NOTE(sevabit): Developer error
+    assert(!testnet &&!stagenet); // NOTE(quorax): Developer error
     nettype = FAKECHAIN;
   }
 #endif
@@ -1433,8 +1433,8 @@ void wallet2::scan_output(const cryptonote::transaction &tx, bool miner_tx, cons
     if (!m_encrypt_keys_after_refresh)
     {
       boost::optional<epee::wipeable_string> pwd = m_callback->on_get_password(pool ? "output found in pool" : "output received");
-      THROW_WALLET_EXCEPTION_IF(!pwd, error::password_needed, tr("Password is needed to compute key image for incoming sevabit"));
-      THROW_WALLET_EXCEPTION_IF(!verify_password(*pwd), error::password_needed, tr("Invalid password: password is needed to compute key image for incoming sevabit"));
+      THROW_WALLET_EXCEPTION_IF(!pwd, error::password_needed, tr("Password is needed to compute key image for incoming quorax"));
+      THROW_WALLET_EXCEPTION_IF(!verify_password(*pwd), error::password_needed, tr("Invalid password: password is needed to compute key image for incoming quorax"));
       decrypt_keys(*pwd);
       m_encrypt_keys_after_refresh = *pwd;
     }
@@ -1561,7 +1561,7 @@ void wallet2::process_new_transaction(const crypto::hash &txid, const cryptonote
   // stored into m_transfers so we cannot determine if the entry in m_transfers
   // came from this transaction or a previous transaction.
 
-  // TODO(sevabit): This case might be feasible at all where a key image is
+  // TODO(quorax): This case might be feasible at all where a key image is
   // duplicated in the _same_ tx in different output indexes, because the
   // algorithm for making a key image uses the output index. Investigate, and if
   // it's not feasible to construct a malicious one without absolutely breaking
@@ -1652,7 +1652,7 @@ void wallet2::process_new_transaction(const crypto::hash &txid, const cryptonote
       continue;
     }
 
-    // NOTE(sevabit): (miner_tx && m_refresh_type == RefreshOptimiseCoinbase) used
+    // NOTE(quorax): (miner_tx && m_refresh_type == RefreshOptimiseCoinbase) used
     // to be an optimisation step that checks if the first output was destined
     // for us otherwise skip. This is not possible for us because our
     // block-reward now always has more than 1 output, mining, super node
@@ -5589,7 +5589,7 @@ bool wallet2::is_transfer_unlocked(uint64_t unlock_time, uint64_t block_height, 
   if (!use_fork_rules(cryptonote::network_version_11_infinite_staking))
     return true;
 
-  if (!key_image) // TODO(sevabit): Try make all callees always pass in a key image for accuracy
+  if (!key_image) // TODO(quorax): Try make all callees always pass in a key image for accuracy
     return true;
 
   blobdata binary_buf;
@@ -6111,7 +6111,7 @@ bool wallet2::sign_tx(unsigned_tx_set &exported_txs, std::vector<wallet2::pendin
     std::vector<crypto::secret_key> additional_tx_keys;
     rct::multisig_out msout;
 
-    sevabit_construct_tx_params tx_params = {};
+    quorax_construct_tx_params tx_params = {};
     tx_params.v4_allow_tx_types        = sd.v4_allow_tx_types;
     tx_params.v3_per_output_unlock     = sd.v3_per_output_unlock;
     tx_params.v2_rct                   = sd.v2_use_rct;
@@ -6585,7 +6585,7 @@ bool wallet2::sign_multisig_tx(multisig_tx_set &exported_txs, std::vector<crypto
       rct_config.bp_version = use_fork_rules(HF_VERSION_SMALLER_BP, 5) ? 2 : 1;
     }
 
-    sevabit_construct_tx_params tx_params = {};
+    quorax_construct_tx_params tx_params = {};
     tx_params.v4_allow_tx_types        = sd.v4_allow_tx_types;
     tx_params.v3_per_output_unlock     = sd.v3_per_output_unlock;
     tx_params.v2_rct                   = sd.v2_use_rct;
@@ -6780,7 +6780,7 @@ int wallet2::get_fee_algorithm() const
 uint64_t wallet2::adjust_mixin(uint64_t mixin) const
 {
   if (mixin != 9) {
-    MWARNING("Requested ring size " << (mixin + 1) << " incorrect for sevabit, using 10");
+    MWARNING("Requested ring size " << (mixin + 1) << " incorrect for quorax, using 10");
     mixin = 9;
   }
   return mixin;
@@ -7178,7 +7178,7 @@ wallet2::stake_result wallet2::check_stake_allowed(const crypto::public_key& sn_
   if (max_contrib_total == 0)
   {
     result.status = stake_result_status::super_node_contribution_maxed;
-    result.msg = tr("The super node cannot receive any more Sevabit from this wallet");
+    result.msg = tr("The super node cannot receive any more QuoraX from this wallet");
     return result;
   }
 
@@ -7206,7 +7206,7 @@ wallet2::stake_result wallet2::check_stake_allowed(const crypto::public_key& sn_
       result.msg.reserve(128);
       result.msg =  tr("You must contribute at least ");
       result.msg += print_money(min_contrib_total);
-      result.msg += tr(" sevabit to become a contributor for this super node.");
+      result.msg += tr(" quorax to become a contributor for this super node.");
       return result;
     }
   }
@@ -7215,7 +7215,7 @@ wallet2::stake_result wallet2::check_stake_allowed(const crypto::public_key& sn_
   {
     result.msg += tr("You may only contribute up to ");
     result.msg += print_money(max_contrib_total);
-    result.msg += tr(" more sevabit to this super node. ");
+    result.msg += tr(" more quorax to this super node. ");
     result.msg += tr("Reducing your stake from ");
     result.msg += print_money(amount);
     result.msg += tr(" to ");
@@ -7535,7 +7535,7 @@ wallet2::register_super_node_result wallet2::create_register_super_node_tx(const
 
     try
     {
-      // NOTE(sevabit): We know the address should always be a primary address and has no payment id, so we can ignore the subaddress/payment id field here
+      // NOTE(quorax): We know the address should always be a primary address and has no payment id, so we can ignore the subaddress/payment id field here
       cryptonote::address_parse_info dest = {};
       dest.address                        = address;
 
@@ -7647,7 +7647,7 @@ wallet2::request_stake_unlock_result wallet2::can_request_stake_unlock(const cry
 
       result.msg.append("You are requesting to unlock a stake of: ");
       result.msg.append(cryptonote::print_money(contribution.amount));
-      result.msg.append(" Sevabit from the super node network.\nThis will schedule the super node: ");
+      result.msg.append(" QuoraX from the super node network.\nThis will schedule the super node: ");
       result.msg.append(node_info.super_node_pubkey);
       result.msg.append(" for deactivation.");
       if (node_info.contributors.size() > 1) {
@@ -7885,7 +7885,7 @@ void wallet2::get_outs(std::vector<std::vector<tools::wallet2::get_outs_entry>> 
     {
       MWARNING("More than 5% of outputs are blacklisted ("
                << output_blacklist.size() << "/" << rct_offsets.size()
-               << "), please notify the Sevabit developers");
+               << "), please notify the QuoraX developers");
     }
 
     // get histogram for the amounts we need
@@ -8587,11 +8587,11 @@ void wallet2::transfer_selected(const std::vector<cryptonote::tx_destination_ent
   rct::multisig_out msout;
   LOG_PRINT_L2("constructing tx");
 
-  // TODO(sevabit): We don't really need this function anymore, only the rct
+  // TODO(quorax): We don't really need this function anymore, only the rct
   // version. Do core tests rely on this? And if so do we even care?
-  // TODO(sevabit): This should be replaced with a NodeRPCProxy function to get the
+  // TODO(quorax): This should be replaced with a NodeRPCProxy function to get the
   // current hardfork version
-  sevabit_construct_tx_params tx_params = {};
+  quorax_construct_tx_params tx_params = {};
   tx_params.v4_allow_tx_types        = use_fork_rules(network_version_11_infinite_staking, 5);
   tx_params.v3_per_output_unlock     = use_fork_rules(network_version_9_super_nodes, 5);
   tx_params.v2_rct                   = false;
@@ -8832,7 +8832,7 @@ void wallet2::transfer_selected_rct(std::vector<cryptonote::tx_destination_entry
   boost::optional<uint8_t> hf_version = get_hard_fork_version();
   THROW_WALLET_EXCEPTION_IF(!hf_version, error::get_hard_fork_version_error, "Failed to query current hard fork version");
 
-  sevabit_construct_tx_params tx_params(*hf_version);
+  quorax_construct_tx_params tx_params(*hf_version);
   tx_params.v3_is_staking_tx = is_staking_tx;
   bool r = cryptonote::construct_tx_and_get_tx_key(m_account.get_keys(), m_subaddresses, sources, splitted_dsts, change_dts, extra, tx, unlock_time, tx_key, additional_tx_keys, rct_config, m_multisig ? &msout : NULL, tx_params);
 
@@ -9343,7 +9343,7 @@ void wallet2::light_wallet_get_address_txs()
     address_tx.m_block_height = t.height;
     address_tx.m_unlock_time  = t.unlock_time;
     address_tx.m_timestamp = t.timestamp;
-    address_tx.m_type  = t.coinbase ? pay_type::miner : pay_type::in; // TODO(sevabit): Only accounts for miner, but wait, do we even care about this code? Looks like openmonero code
+    address_tx.m_type  = t.coinbase ? pay_type::miner : pay_type::in; // TODO(quorax): Only accounts for miner, but wait, do we even care about this code? Looks like openmonero code
     address_tx.m_mempool  = t.mempool;
     m_light_wallet_address_txs.emplace(tx_hash,address_tx);
 
@@ -9357,7 +9357,7 @@ void wallet2::light_wallet_get_address_txs()
       payment.m_block_height = t.height;
       payment.m_unlock_time  = t.unlock_time;
       payment.m_timestamp = t.timestamp;
-      payment.m_type = t.coinbase ? pay_type::miner : pay_type::in; // TODO(sevabit): Only accounts for miner, but wait, do we even care about this code? Looks like openmonero code
+      payment.m_type = t.coinbase ? pay_type::miner : pay_type::in; // TODO(quorax): Only accounts for miner, but wait, do we even care about this code? Looks like openmonero code
         
       if (t.mempool) {   
         if (std::find(unconfirmed_payments_txs.begin(), unconfirmed_payments_txs.end(), tx_hash) == unconfirmed_payments_txs.end()) {
@@ -12832,7 +12832,7 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
     }
   }
 
-  std::string uri = "sevabit:" + address;
+  std::string uri = "quorax:" + address;
   unsigned int n_fields = 0;
 
   if (!payment_id.empty())
@@ -12861,9 +12861,9 @@ std::string wallet2::make_uri(const std::string &address, const std::string &pay
 //----------------------------------------------------------------------------------------------------
 bool wallet2::parse_uri(const std::string &uri, std::string &address, std::string &payment_id, uint64_t &amount, std::string &tx_description, std::string &recipient_name, std::vector<std::string> &unknown_parameters, std::string &error)
 {
-  if (uri.substr(0, 8) != "sevabit:")
+  if (uri.substr(0, 8) != "quorax:")
   {
-    error = std::string("URI has wrong scheme (expected \"sevabit:\"): ") + uri;
+    error = std::string("URI has wrong scheme (expected \"quorax:\"): ") + uri;
     return false;
   }
 
