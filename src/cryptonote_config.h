@@ -68,7 +68,7 @@ static_assert(STAKING_PORTIONS % 3 == 0, "Use a multiple of three, so that it di
 // COIN - number of smallest units in one coin
 #define COIN                                            ((uint64_t)1000000000) // pow(10, 9)
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY                                    ((uint64_t)25000000 * COIN)//25 Millone
+#define MONEY_SUPPLY                                    ((uint64_t)25000000 * COIN)//25 Millones
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000000) // 3 * pow(10, 11)
 #define EMISSION_LINEAR_BASE                            ((uint64_t)(1) << 58)
@@ -84,7 +84,7 @@ static_assert(STAKING_PORTIONS % 3 == 0, "Use a multiple of three, so that it di
 #define CRYPTONOTE_LONG_TERM_BLOCK_WEIGHT_WINDOW_SIZE   100000 // size in blocks of the long term block weight median window
 #define CRYPTONOTE_SHORT_TERM_BLOCK_WEIGHT_SURGE_FACTOR 50
 #define CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE          600
-#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                9
+#define CRYPTONOTE_DISPLAY_DECIMAL_POINT                8
 
 #define FEE_PER_KB_OLD                                  ((uint64_t)10000000000) // pow(10, 10)
 #define FEE_PER_KB                                      ((uint64_t)2000000000) // 2 * pow(10, 9)
@@ -184,8 +184,8 @@ namespace config
 {
   uint64_t const DEFAULT_FEE_ATOMIC_XMR_PER_KB = 500; // Just a placeholder!  Change me!
   uint8_t const FEE_CALCULATION_MAX_RETRIES = 10;
-  uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)2000000000); // 2 * pow(10, 9)
-  uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000000); // pow(10, 8)
+  uint64_t const DEFAULT_DUST_THRESHOLD = ((uint64_t)200000000); // 2 * pow(10, 8)
+  uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)10000000); // pow(10, 7)
   std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x4e8e;
@@ -197,8 +197,8 @@ namespace config
   boost::uuids::uuid const NETWORK_ID = { {
         0x42 ,0xb8, 0x40, 0x91 ,0x64, 0x75, 0x74, 0x67, 0x9c, 0x2a, 0x61, 0xd5, 0x6d, 0x62, 0x79
     } }; 
-  std::string const GENESIS_TX = "010a01ff00019e91c191c79502029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101d613baa7e3774f166c4208bddbdd6484c1bf3d478be65a6c9ba60bbfd383fdaa";
-  uint32_t const GENESIS_NONCE = 1022201;
+  std::string const GENESIS_TX = "010a01ff000180c2d72f0286a05f0ce35b0ce668665a7d9ca94aaab4359fe208b2d85d5a9c16b676f02a982101f6c583b6336f93b1b50f65280aeb19e154e9401897f25efee38040bec3f2a1f5";
+  uint32_t const GENESIS_NONCE = 952454;
 
   uint64_t const GOVERNANCE_REWARD_INTERVAL_IN_BLOCKS = 100; // ((60 * 60 * 24 * 7) / DIFFICULTY_TARGET_V2);
   std::string const GOVERNANCE_WALLET_ADDRESS[] =

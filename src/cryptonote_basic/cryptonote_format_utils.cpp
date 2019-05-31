@@ -1094,6 +1094,7 @@ namespace cryptonote
     switch (decimal_point)
     {
       case 9:
+      case 8:
       case 6:
       case 3:
       case 0:
@@ -1117,6 +1118,8 @@ namespace cryptonote
     {
       case 9:
         return "quorax";
+      case 8:
+        return "QuoraX";
       case 6:
         return "megarok";
       case 3:

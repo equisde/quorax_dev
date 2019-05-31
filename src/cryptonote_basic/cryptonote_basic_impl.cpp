@@ -90,13 +90,12 @@ namespace cryptonote {
   //-----------------------------------------------------------------------------------------------
   bool get_base_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, uint64_t &reward, uint8_t version, uint64_t height) {
 
-    //premine reward
-    if (height == 2)
+    
+    if (height < 5)
     {
-      reward = 25000000000000000;
+      reward = 0;
       return true;
     }
-
     static_assert(DIFFICULTY_TARGET_V2%60==0,"difficulty targets must be a multiple of 60");
 
     uint64_t emission_supply_component = (already_generated_coins * EMISSION_SUPPLY_MULTIPLIER) / EMISSION_SUPPLY_DIVISOR;

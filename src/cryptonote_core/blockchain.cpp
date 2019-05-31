@@ -98,11 +98,11 @@ struct hard_fork_record
 // version 7 from the start of the blockchain, inhereted from Monero mainnet
 static const hard_fork_record mainnet_hard_forks[] =
 {
-  { network_version_7,               1, 0, 1543540000 },
-  { network_version_8,               2, 0, 1543540001 },
-  { network_version_9_super_nodes,   3, 0, 1543540002 },
-  { network_version_10_bulletproofs, 4, 0, 1543540003 }, 
-  //,{ network_version_11_infinite_staking, 1000000, 0, 1994615820  }, //fork disabled until thoroughly tested 
+  { network_version_7,               2, 0, 1543540000 },
+  { network_version_8,               3, 0, 1543540001 },
+  { network_version_9_super_nodes,   4, 0, 1543540002 },
+  { network_version_10_bulletproofs, 5, 0, 1543540003 }, 
+  { network_version_11_infinite_staking, 6, 0, 1559244241  },
 };
 
 static const hard_fork_record testnet_hard_forks[] =
@@ -1250,10 +1250,18 @@ bool Blockchain::validate_miner_transaction(const block& b, size_t cumulative_bl
   }
 
   base_reward = reward_parts.adjusted_base_reward;
-  if(base_reward + fee < money_in_use)
+  if(height != 0)
   {
-    MERROR_VER("coinbase transaction spend too much money (" << print_money(money_in_use) << "). Block reward is " << print_money(base_reward) << "(" << print_money(base_reward) << "+" << print_money(fee) << ")");
-    return false;
+        if(base_reward + fee < money_in_use)
+
+        {
+          MERROR_VER("coinbase transaction spend too much money (" << print_money(money_in_use) << "). Block reward is " << print_money(base_reward) << "(" << print_money(base_reward) << "+" << print_money(fee) << ")");
+          return false;
+        }
+
+  }else{
+    printf("pase :D");
+    return true;
   }
 
   // since a miner can claim less than the full block reward, we update the base_reward

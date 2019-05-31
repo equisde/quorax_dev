@@ -39,7 +39,7 @@ if (WIN32 AND STATIC)
 endif ()
 
 find_package(GTest)
-
+GENESIS_COINBASE_TX_HEX=010a01ff00019e91c191c79502029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101d613baa7e3774f166c4208bddbdd6484c1bf3d478be65a6c9ba60bbfd383fdaa      
 if (GTest_FOUND)
   include_directories(SYSTEM ${GTEST_INCLUDE_DIRS})
 else ()
