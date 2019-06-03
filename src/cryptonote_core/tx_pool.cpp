@@ -1444,7 +1444,7 @@ namespace cryptonote
     expected_reward = best_coinbase;
     LOG_PRINT_L2("Block template filled with " << bl.tx_hashes.size() << " txes, weight "
         << total_weight << "/" << max_total_weight << ", coinbase " << print_money(best_coinbase)
-        << " (including " << print_money(fee) << " in fees)");
+        << " (including " << print_money(fee) << " in fees) expected reward " << expected_reward); 
     return true;
   }
   //---------------------------------------------------------------------------------
