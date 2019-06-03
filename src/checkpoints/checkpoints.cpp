@@ -41,8 +41,8 @@ using namespace epee;
 
 #include "common/loki_integration_test_hooks.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "checkpoints"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "checkpoints"
 
 namespace cryptonote
 {
@@ -172,7 +172,7 @@ namespace cryptonote
       case UNDEFINED:
         break;
       case MAINNET:
-#if !defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if !defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
 //        ADD_CHECKPOINT(0,     "0c5455eb31db765b2e2a3c2e4ebf5b500c1a3e4ddc6b72d62ce23a04952af381");
 
 #endif		   

@@ -71,8 +71,8 @@
   #include <unistd.h>
 #endif
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "miner"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "miner"
 
 using namespace epee;
 

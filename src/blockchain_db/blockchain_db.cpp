@@ -48,8 +48,8 @@ static const char *db_types[] = {
   NULL
 };
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "blockchain.db"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "blockchain.db"
 
 using epee::string_tools::pod_to_hex;
 

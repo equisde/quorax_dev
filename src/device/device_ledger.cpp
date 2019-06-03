@@ -44,8 +44,8 @@ namespace hw {
 
   #ifdef WITH_DEVICE_LEDGER
 
-    #undef SEVABIT_DEFAULT_LOG_CATEGORY
-    #define SEVABIT_DEFAULT_LOG_CATEGORY "device.ledger"
+    #undef QUORAX_DEFAULT_LOG_CATEGORY
+    #define QUORAX_DEFAULT_LOG_CATEGORY "device.ledger"
 
     /* ===================================================================== */
     /* ===                           Debug                              ==== */

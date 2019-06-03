@@ -45,8 +45,8 @@ using namespace epee;
 #include "common/dns_utils.h"
 #include "common/loki.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "cn"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "cn"
 
 namespace cryptonote {
 
@@ -93,7 +93,7 @@ namespace cryptonote {
     
     if (height < 5)
     {
-      reward = 0;
+      reward = 100000000;
       return true;
     }
     static_assert(DIFFICULTY_TARGET_V2%60==0,"difficulty targets must be a multiple of 60");
@@ -107,9 +107,9 @@ namespace cryptonote {
     }
 
     if (version >= 11)
-     base_reward = 80000000000; //improve emission for community
+     base_reward = 8000000000; //improve emission for community
     else if (version >= 8)
-      base_reward = 28000000000.0 + 100000000000.0 / quorax::exp2(height / (720.0 * 90.0)); // halve every 90 days.
+      base_reward = 2800000000.0 + 10000000000.0 / quorax::exp2(height / (720.0 * 90.0)); // halve every 90 days.
   
     if(already_generated_coins>=MONEY_SUPPLY){
 		reward=0;

@@ -41,8 +41,8 @@
 #include "cryptonote_config.h"
 #include "difficulty.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "difficulty"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "difficulty"
 
 namespace cryptonote {
 

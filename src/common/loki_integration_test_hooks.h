@@ -1,11 +1,11 @@
-#if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
 
 #if defined _WIN32
 #error "Need to implement semaphores for Windows Layer"
 #endif
 
-#ifndef SEVABIT_INTEGRATION_TEST_HOOKS_H
-#define SEVABIT_INTEGRATION_TEST_HOOKS_H
+#ifndef QUORAX_INTEGRATION_TEST_HOOKS_H
+#define QUORAX_INTEGRATION_TEST_HOOKS_H
 
 //
 // Header
@@ -43,12 +43,12 @@ extern bool core_is_idle;
 
 }; // namespace quorax
 
-#endif // SEVABIT_INTEGRATION_TEST_HOOKS_H
+#endif // QUORAX_INTEGRATION_TEST_HOOKS_H
 
 //
 // CPP Implementation
 //
-#ifdef SEVABIT_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
+#ifdef QUORAX_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
 #include <string.h>
 #include <assert.h>
 #include <chrono>
@@ -277,6 +277,6 @@ void quorax::write_redirected_stdout_to_shared_mem()
   use_redirected_cout();
 }
 
-#endif // SEVABIT_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
-#endif // SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS
+#endif // QUORAX_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
+#endif // QUORAX_ENABLE_INTEGRATION_TEST_HOOKS
 

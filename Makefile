@@ -37,11 +37,11 @@ endif
 subbuilddir:=$(shell echo  `uname | sed -e 's|[:/\\ \(\)]|_|g'`/`git branch | grep '\* ' | cut -f2- -d' '| sed -e 's|[:/\\ \(\)]|_|g'`)
 ifeq ($(USE_SINGLE_BUILDDIR),)
   builddir := build/"$(subbuilddir)"
-  topdir   := ../../../..
+  topdir   := ../../..
   deldirs  := $(builddir)
 else
   builddir := build
-  topdir   := ../..
+  topdir   := ..
   deldirs  := $(builddir)/debug $(builddir)/release $(builddir)/fuzz
 endif
 
@@ -177,6 +177,6 @@ tags:
 # Debug Target for Developers: Only build daemon and wallet
 developer_daemon_and_wallet: tags
 	mkdir -p $(builddir)/debug
-	cd $(builddir)/debug && cmake -D CMAKE_BUILD_TYPE=Debug -D BUILD_TESTS=OFF -D SEVABIT_DAEMON_AND_WALLET_ONLY=ON $(topdir) && $(MAKE)
+	cd $(builddir)/debug && cmake -D CMAKE_BUILD_TYPE=Debug -D BUILD_TESTS=OFF -D QUORAX_DAEMON_AND_WALLET_ONLY=ON $(topdir) && $(MAKE)
 
 .PHONY: all cmake-debug debug debug-test debug-all cmake-release release release-test release-all clean tags developer_daemon_and_wallet

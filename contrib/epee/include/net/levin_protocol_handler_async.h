@@ -43,8 +43,8 @@
 #include <random>
 #include <chrono>
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "net"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "net"
 
 #ifndef MIN_BYTES_WANTED
 #define MIN_BYTES_WANTED	512

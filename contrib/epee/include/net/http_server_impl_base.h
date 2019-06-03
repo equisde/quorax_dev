@@ -37,8 +37,8 @@
 #include "http_protocol_handler.h"
 #include "net/http_server_handlers_map2.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "net.http"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "net.http"
 
 namespace epee
 {

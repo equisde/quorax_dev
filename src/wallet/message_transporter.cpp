@@ -34,8 +34,8 @@
 #include "net/net_parse_helpers.h"
 #include <algorithm>
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "wallet.mms"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "wallet.mms"
 #define PYBITMESSAGE_DEFAULT_API_PORT 8442
 
 namespace mms

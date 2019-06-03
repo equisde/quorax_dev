@@ -34,8 +34,8 @@
 using namespace crypto;
 using namespace std;
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "ringct"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "ringct"
 
 namespace rct {
 

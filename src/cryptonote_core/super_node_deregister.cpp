@@ -42,8 +42,8 @@
 #include <string>
 #include <vector>
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "super_nodes"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "super_nodes"
 
 namespace super_nodes
 {

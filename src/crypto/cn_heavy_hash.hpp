@@ -215,7 +215,7 @@ private:
 
 	inline bool check_override()
 	{
-		const char *env = getenv("SEVABIT_USE_SOFTWARE_AES");
+		const char *env = getenv("QUORAX_USE_SOFTWARE_AES");
 		if (!env) {
 			return false;
 		}

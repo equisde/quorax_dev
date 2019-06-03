@@ -35,8 +35,8 @@
 #include "net/http_client.h"
 #include "download.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "net.dl"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "net.dl"
 
 namespace tools
 {

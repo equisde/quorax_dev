@@ -32,8 +32,8 @@
 #include "misc_log_ex.h"
 #include "span.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "net.buffer"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "net.buffer"
 
 //#define NET_BUFFER_LOG(x) MDEBUG(x)
 #define NET_BUFFER_LOG(x) ((void)0)

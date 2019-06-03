@@ -34,8 +34,8 @@
 #include <boost/program_options/variables_map.hpp>
 #include <string>
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "daemon"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "daemon"
 
 namespace daemonize
 {

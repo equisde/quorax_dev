@@ -36,8 +36,8 @@
 
 #include <string>
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "daemon"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "daemon"
 
 namespace daemonize
 {
@@ -59,7 +59,7 @@ namespace daemonize
       boost::program_options::variables_map const & vm
     )
   {
-    LOG_PRINT_L0("QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ") Daemonised");
+    LOG_PRINT_L0("QuoraX '" << QUORAX_RELEASE_NAME << "' (v" << QUORAX_VERSION_FULL << ") Daemonised");
     return t_daemon{vm};
   }
 

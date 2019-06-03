@@ -48,8 +48,8 @@
 #include <string>
 #include <numeric>
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "daemon"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "daemon"
 
 namespace daemonize {
 
@@ -61,7 +61,7 @@ namespace {
   {
     std::cout << prompt << std::flush;
     std::string result;
-#if defined (SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined (QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
     quorax::write_redirected_stdout_to_shared_mem();
     quorax::fixed_buffer buffer = quorax::read_from_stdin_shared_mem();
     result.reserve(buffer.len);

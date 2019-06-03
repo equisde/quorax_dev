@@ -177,7 +177,7 @@ namespace daemonizer
     }
     else // interactive
     {
-      //LOG_PRINT_L0("QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL);
+      //LOG_PRINT_L0("QuoraX '" << QUORAX_RELEASE_NAME << "' (v" << QUORAX_VERSION_FULL);
       return executor.run_interactive(vm);
     }
 

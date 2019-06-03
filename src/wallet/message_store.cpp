@@ -42,8 +42,8 @@
 #include "string_tools.h"
 
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "wallet.mms"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "wallet.mms"
 
 namespace mms
 {

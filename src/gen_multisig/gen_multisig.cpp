@@ -54,8 +54,8 @@ using namespace cryptonote;
 using boost::lexical_cast;
 namespace po = boost::program_options;
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "wallet.gen_multisig"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "wallet.gen_multisig"
 
 namespace genms
 {

@@ -35,8 +35,8 @@
 
 #include "common/loki_integration_test_hooks.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "quorum_cop"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "quorum_cop"
 
 namespace super_nodes
 {
@@ -75,7 +75,7 @@ namespace super_nodes
       return;
 
     time_t const now          = time(nullptr);
-#if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
     time_t const min_lifetime = 0;
 #else
     time_t const min_lifetime = 60 * 60 * 2;
@@ -190,9 +190,9 @@ namespace super_nodes
 
   void quorum_cop::generate_uptime_proof_request(cryptonote::NOTIFY_UPTIME_PROOF::request& req) const
   {
-    req.snode_version_major = static_cast<uint16_t>(SEVABIT_VERSION_MAJOR);
-    req.snode_version_minor = static_cast<uint16_t>(SEVABIT_VERSION_MINOR);
-    req.snode_version_patch = static_cast<uint16_t>(SEVABIT_VERSION_PATCH);
+    req.snode_version_major = static_cast<uint16_t>(QUORAX_VERSION_MAJOR);
+    req.snode_version_minor = static_cast<uint16_t>(QUORAX_VERSION_MINOR);
+    req.snode_version_patch = static_cast<uint16_t>(QUORAX_VERSION_PATCH);
 
     // 2.0.x will only accept a v10 uptime proof with a snode_version_major == 2 instead of >= 2, so
     // if we're sending such a proof fake the version as 2.3.x instead of 3.0.x to keep 2.0.x nodes

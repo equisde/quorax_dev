@@ -43,8 +43,8 @@ extern "C"
 #include "multiexp.h"
 #include "bulletproofs.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "bulletproofs"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "bulletproofs"
 
 //#define DEBUG_BP
 

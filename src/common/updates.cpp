@@ -33,8 +33,8 @@
 #include "dns_utils.h"
 #include "updates.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "updates"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "updates"
 
 namespace tools
 {

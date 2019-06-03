@@ -32,8 +32,8 @@
 #include "serializeble_struct_helper.h"
 #include "int-util.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "net"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "net"
 
 namespace epee
 {

@@ -42,8 +42,8 @@ extern "C"
 #include "cryptonote_basic_impl.h"
 #include "cryptonote_format_utils.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "account"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "account"
 
 #define KEYS_ENCRYPTION_SALT 'k'
 

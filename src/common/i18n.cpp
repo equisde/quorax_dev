@@ -36,8 +36,8 @@
 #include "common/i18n.h"
 #include "translation_files.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "i18n"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "i18n"
 
 #define MAX_LANGUAGE_SIZE 16
 

@@ -1,6 +1,6 @@
 #include "scoped_message_writer.h"
 
-#define SEVABIT_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
+#define QUORAX_INTEGRATION_TEST_HOOKS_IMPLEMENTATION
 #include "common/loki_integration_test_hooks.h"
 
 // NOTE(quorax): This file only exists because I need a way to hook into the
@@ -16,7 +16,7 @@ tools::scoped_message_writer::~scoped_message_writer()
   {
     m_flush = false;
 
-#if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
     std::cout << m_oss.str();
     quorax::write_redirected_stdout_to_shared_mem();
     return;

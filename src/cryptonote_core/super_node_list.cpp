@@ -42,8 +42,8 @@
 #include "super_node_list.h"
 #include "super_node_rules.h"
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "super_nodes"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "super_nodes"
 
 namespace super_nodes
 {

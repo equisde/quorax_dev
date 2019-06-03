@@ -97,8 +97,8 @@ using boost::lexical_cast;
 namespace po = boost::program_options;
 typedef cryptonote::simple_wallet sw;
 
-#undef SEVABIT_DEFAULT_LOG_CATEGORY
-#define SEVABIT_DEFAULT_LOG_CATEGORY "wallet.simplewallet"
+#undef QUORAX_DEFAULT_LOG_CATEGORY
+#define QUORAX_DEFAULT_LOG_CATEGORY "wallet.simplewallet"
 
 #define EXTENDED_LOGS_FILE "wallet_details.log"
 
@@ -258,7 +258,7 @@ namespace
   const char* USAGE_REQUEST_STAKE_UNLOCK("request_stake_unlock <super_node_pubkey>");
   const char* USAGE_PRINT_LOCKED_STAKES("print_locked_stakes");
 
-#if defined (SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined (QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
   std::string input_line(const std::string& prompt, bool yesno = false)
   {
     std::string buf;
@@ -270,7 +270,7 @@ namespace
     buf = buffer.data;
     return epee::string_tools::trim(buf);
   }
-#else // SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS
+#else // QUORAX_ENABLE_INTEGRATION_TEST_HOOKS
   std::string input_line(const std::string& prompt, bool yesno = false)
   {
     std::string buf;
@@ -291,11 +291,11 @@ namespace
 
     return epee::string_tools::trim(buf);
   }
-#endif // SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS
+#endif // QUORAX_ENABLE_INTEGRATION_TEST_HOOKS
 
   epee::wipeable_string input_secure_line(const char *prompt)
   {
-#if defined (SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined (QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
     std::cout << prompt;
     quorax::write_redirected_stdout_to_shared_mem();
     quorax::fixed_buffer buffer = quorax::read_from_stdin_shared_mem();
@@ -321,7 +321,7 @@ namespace
 
   boost::optional<tools::password_container> password_prompter(const char *prompt, bool verify)
   {
-#if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
     std::cout << prompt << ": NOTE(quorax): Passwords not supported, defaulting to empty password";
     quorax::write_redirected_stdout_to_shared_mem();
     tools::password_container pwd_container(std::string(""));
@@ -2037,7 +2037,7 @@ bool simple_wallet::save_known_rings(const std::vector<std::string> &args)
 
 bool simple_wallet::version(const std::vector<std::string> &args)
 {
-  message_writer() << "QuoraX '" << SEVABIT_RELEASE_NAME << "' (v" << SEVABIT_VERSION_FULL << ")";
+  message_writer() << "QuoraX '" << QUORAX_RELEASE_NAME << "' (v" << QUORAX_VERSION_FULL << ")";
   return true;
 }
 
@@ -8164,7 +8164,7 @@ std::string simple_wallet::get_prompt() const
 }
 //----------------------------------------------------------------------------------------------------
 
-#if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
 #include <thread>
 #endif
 
@@ -8180,7 +8180,7 @@ bool simple_wallet::run()
 
   message_writer(console_color_green, false) << "Background refresh thread started";
 
-#if defined(SEVABIT_ENABLE_INTEGRATION_TEST_HOOKS)
+#if defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
   for (;;)
   {
     quorax::fixed_buffer const input = quorax::read_from_stdin_shared_mem();

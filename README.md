@@ -18,7 +18,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Vulnerability disclosure
 
-- Check out our [Vulnerability Response Process](https://quorax.github.io/quorax-docs/Contributing/VULNERABILITY_RESPONSE_SEVABIT), encourages prompt disclosure of any Vulnerabilities
+- Check out our [Vulnerability Response Process](https://quorax.github.io/quorax-docs/Contributing/VULNERABILITY_RESPONSE_QUORAX), encourages prompt disclosure of any Vulnerabilities
 
 ## Information
 

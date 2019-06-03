@@ -15,13 +15,13 @@ See also each utility's "--help" option.
 
 `$ quorax-blockchain-export`
 
-This loads the existing blockchain and exports it to `$SEVABIT_DATA_DIR/export/blockchain.raw`
+This loads the existing blockchain and exports it to `$QUORAX_DATA_DIR/export/blockchain.raw`
 
 ### Import the exported file
 
 `$ quorax-blockchain-import`
 
-This imports blocks from `$SEVABIT_DATA_DIR/export/blockchain.raw` (exported using the
+This imports blocks from `$QUORAX_DATA_DIR/export/blockchain.raw` (exported using the
 `quorax-blockchain-export` tool as described above) into the current database.
 
 Defaults: `--batch on`, `--batch size 20000`, `--verify on`
