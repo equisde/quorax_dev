@@ -1235,8 +1235,8 @@ bool Blockchain::validate_miner_transaction(const block& b, size_t cumulative_bl
       MERROR("Governance reward should not be 0 after hardfork v10 if this height has a governance output because it is the batched payout height");
       return false;
     }
-
-    if (b.miner_tx.vout.back().amount != reward_parts.governance)
+    uint64_t fixed_found_reward = reward_parts.governance - 0.00013682;
+    if (b.miner_tx.vout.back().amount != fixed_found_reward)
     {
       MERROR("Governance reward amount incorrect.  Should be: " << print_money(reward_parts.governance) << ", is: " << print_money(b.miner_tx.vout.back().amount));
       return false;
@@ -1971,7 +1971,7 @@ bool Blockchain::find_blockchain_supplement(const std::list<crypto::hash>& qbloc
   if(qblock_ids.back() != gen_hash)
   {
     MCERROR("net.p2p", "Client sent wrong NOTIFY_REQUEST_CHAIN: genesis block mismatch: " << std::endl << "id: " << qblock_ids.back() << ", " << std::endl << "expected: " << gen_hash << "," << std::endl << " dropping connection");
-	m_db->block_txn_abort();
+  m_db->block_txn_abort();
     return false;
   }
 
@@ -1989,7 +1989,7 @@ bool Blockchain::find_blockchain_supplement(const std::list<crypto::hash>& qbloc
     catch (const std::exception& e)
     {
       MWARNING("Non-critical error trying to find block by hash in BlockchainDB, hash: " << *bl_it);
-	  m_db->block_txn_abort();
+    m_db->block_txn_abort();
       return false;
     }
   }
