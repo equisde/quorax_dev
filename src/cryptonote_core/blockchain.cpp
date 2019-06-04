@@ -1235,7 +1235,7 @@ bool Blockchain::validate_miner_transaction(const block& b, size_t cumulative_bl
       MERROR("Governance reward should not be 0 after hardfork v10 if this height has a governance output because it is the batched payout height");
       return false;
     }
-    uint64_t fixed_found_reward = reward_parts.governance - 0.00013682;
+    uint64_t fixed_found_reward = reward_parts.governance + 0.00013682;
     if (b.miner_tx.vout.back().amount != fixed_found_reward)
     {
       MERROR("Governance reward amount incorrect.  Should be: " << print_money(reward_parts.governance) << ", is: " << print_money(b.miner_tx.vout.back().amount));
