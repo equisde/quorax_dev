@@ -173,20 +173,10 @@ namespace cryptonote
         break;
       case MAINNET:
 #if !defined(QUORAX_ENABLE_INTEGRATION_TEST_HOOKS)
-        ADD_CHECKPOINT(0,     "0c5455eb31db765b2e2a3c2e4ebf5b500c1a3e4ddc6b72d62ce23a04952af381");
-    	ADD_CHECKPOINT(1,     "9fcd2ffbafd27b0a2a16878e4c49a843e63e5a1be985fb4c327892ac650fb07d");
-    	ADD_CHECKPOINT(2,     "a6ace8e6763dca9b5dc83d8b3d2aade6bf52a06154a96b300232f831cdeb4456");
-    	ADD_CHECKPOINT(3,     "fa1d63ff24357b65dfd0a3cad155cb39a061a7619ae6a6d528dd93964bb55ebd");
-    	ADD_CHECKPOINT(4,     "b87d33d937d301a5f07f7bfa5414746f167e84843aeafbd834e858eb720df611");
-        ADD_CHECKPOINT(7566,     "10c63035ea23064a8490897336548742da126ac36fcf2cf30d01b107e74227d4");
-        ADD_CHECKPOINT(8596,     "8c299467b94517e2a26e61782fe2b753b1ff5d17d40bbef035c1664419ec77d3");
-        ADD_CHECKPOINT(9063, "c91f8c259c6f8f93264193c4e6f755896af5f52a89e13511d696dbda5d2dd695");
-        ADD_CHECKPOINT(9470, "8cea1c60fc8ee69fd2b0702af7381444b544ea8d01b9acce0eb90ada19570e79");
-        ADD_CHECKPOINT(9471, "c5070496981aef7e594ca85b2b0e85b9ccc7b7dffc46542fc221f48229006d50");
-        ADD_CHECKPOINT(9472, "5b32af119be8f156f5b4eb72f939b9de0962404c9c97c243e8c96e09bde47ccc");
-        ADD_CHECKPOINT(16061, "9b7fa0e4973ff0b814caef109d42bf7614dad13786858b78eae6f5098c3f2488");
-#endif		   
-	break;
+        //ADD_CHECKPOINT(0,     "0c5455eb31db765b2e2a3c2e4ebf5b500c1a3e4ddc6b72d62ce23a04952af381");
+      
+#endif       
+  break;
     }
     return true;
   }
@@ -215,11 +205,11 @@ namespace cryptonote
       uint64_t height;
       height = it->height;
       if (height <= prev_max_height) {
-	LOG_PRINT_L1("ignoring checkpoint height " << height);
+  LOG_PRINT_L1("ignoring checkpoint height " << height);
       } else {
-	std::string blockhash = it->hash;
-	LOG_PRINT_L1("Adding checkpoint height " << height << ", hash=" << blockhash);
-	ADD_CHECKPOINT(height, blockhash);
+  std::string blockhash = it->hash;
+  LOG_PRINT_L1("Adding checkpoint height " << height << ", hash=" << blockhash);
+  ADD_CHECKPOINT(height, blockhash);
       }
       ++it;
     }
