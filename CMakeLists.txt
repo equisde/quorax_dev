@@ -192,10 +192,10 @@ if(NOT MANUAL_SUBMODULES)
     endfunction ()
     
     message(STATUS "Checking submodules")
-    #check_submodule(external/miniupnp)
-    #check_submodule(external/unbound)
-    #check_submodule(external/rapidjson)
-    #check_submodule(external/trezor-common)
+    check_submodule(external/miniupnp)
+    check_submodule(external/unbound)
+    check_submodule(external/rapidjson)
+    check_submodule(external/trezor-common)
   endif()
 endif()
 
@@ -993,7 +993,7 @@ add_subdirectory(contrib)
 add_subdirectory(src)
 
 if(BUILD_TESTS)
-  #add_subdirectory(tests)
+  add_subdirectory(tests)
 endif()
 
 if(BUILD_DOCUMENTATION)

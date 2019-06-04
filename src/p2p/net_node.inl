@@ -424,12 +424,12 @@ namespace nodetool
     std::set<std::string> full_addrs;
     if (nettype == cryptonote::TESTNET)
     {
-      full_addrs.insert("190.196.222.39:33696");   
+      full_addrs.insert("seed1.quorax.com:23048");   
       full_addrs.insert("seed2.quorax.com:23048");
     }
     else if (nettype == cryptonote::STAGENET)
     {
-      full_addrs.insert("190.196.222.39:33696");   
+      full_addrs.insert("seed1.quorax.com:24048");   
       full_addrs.insert("seed2.quorax.com:24048");
     }
     else if (nettype == cryptonote::FAKECHAIN)
@@ -437,7 +437,7 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("190.196.222.39:33696");   
+      full_addrs.insert("seed1.quorax.com:22048");   
       full_addrs.insert("seed2.quorax.com:22048");
     }
     return full_addrs;

@@ -90,12 +90,13 @@ namespace cryptonote {
   //-----------------------------------------------------------------------------------------------
   bool get_base_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, uint64_t &reward, uint8_t version, uint64_t height) {
 
-    
-    if (height < 5)
+    //premine reward
+    if (height == 2)
     {
-      reward = 100000000;
+      reward = 25000000000000000;
       return true;
     }
+
     static_assert(DIFFICULTY_TARGET_V2%60==0,"difficulty targets must be a multiple of 60");
 
     uint64_t emission_supply_component = (already_generated_coins * EMISSION_SUPPLY_MULTIPLIER) / EMISSION_SUPPLY_DIVISOR;
@@ -107,9 +108,9 @@ namespace cryptonote {
     }
 
     if (version >= 11)
-     base_reward = 8000000000; //improve emission for community
+     base_reward = 80000000000; //improve emission for community
     else if (version >= 8)
-      base_reward = 2800000000.0 + 1000000000.0 / quorax::exp2(height / (720.0 * 90.0)); // halve every 90 days.
+      base_reward = 28000000000.0 + 100000000000.0 / quorax::exp2(height / (720.0 * 90.0)); // halve every 90 days.
   
     if(already_generated_coins>=MONEY_SUPPLY){
 		reward=0;

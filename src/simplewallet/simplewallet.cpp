@@ -2253,8 +2253,6 @@ bool simple_wallet::set_unit(const std::vector<std::string> &args/* = std::vecto
 
   if (unit == "quorax")
     decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT;
-  else if (unit == "QuoraX")
-    decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT;
   else if (unit == "megarok")
     decimal_point = CRYPTONOTE_DISPLAY_DECIMAL_POINT - 3;
   else if (unit == "kilorok")

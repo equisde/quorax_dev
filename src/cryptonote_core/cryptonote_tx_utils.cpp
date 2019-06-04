@@ -434,7 +434,7 @@ namespace cryptonote
     }
     else
     {
-      result.governance = 50000000000000;//governance_reward_formula(result.original_base_reward);
+      result.governance = governance_reward_formula(result.original_base_reward);
     }
 
     result.base_miner     = result.adjusted_base_reward - (result.governance + result.super_node_paid);
