@@ -102,7 +102,7 @@ static const hard_fork_record mainnet_hard_forks[] =
   { network_version_8,               2, 0, 1543540001 },
   { network_version_9_super_nodes,   3, 0, 1543540002 },
   { network_version_10_bulletproofs, 4, 0, 1543540003 }, 
-  //,{ network_version_11_infinite_staking, 1000000, 0, 1994615820  }, //fork disabled until thoroughly tested 
+  { network_version_11_infinite_staking, 5, 0, 1543540007  }, //fork disabled until thoroughly tested 
 };
 
 static const hard_fork_record testnet_hard_forks[] =
