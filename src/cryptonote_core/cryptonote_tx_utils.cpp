@@ -353,7 +353,7 @@ namespace cryptonote
     {
       if (reward_parts.governance == 0)
       {
-        CHECK_AND_ASSERT_MES(hard_fork_version >= network_version_10_bulletproofs, false, "Governance reward can NOT be 0 before hardfork 10, hard_fork_version: " << hard_fork_version);
+        CHECK_AND_ASSERT_MES(hard_fork_version >= network_version_10_bulletproofs, false, "Governance reward can NOT be 0 before hardfork 10, hard_fork_version: " << hard_fork_version << " governance reward: " << reward_parts.governance);
       }
       else
       {
@@ -401,13 +401,13 @@ namespace cryptonote
       return false;
     }
     uint64_t height;
-    if (height > 5){
+    
       if (base_reward == 0)
       {
         MERROR("Unexpected base reward of 0");
         return false;
       }
-    }
+    
     if (already_generated_coins == 0)
     {
       result.original_base_reward = result.adjusted_base_reward = result.base_miner = base_reward;
