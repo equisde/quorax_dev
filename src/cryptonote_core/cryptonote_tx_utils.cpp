@@ -400,13 +400,14 @@ namespace cryptonote
       MERROR("Failed to calculate base block reward");
       return false;
     }
-
-    if (base_reward == 0)
-    {
-      MERROR("Unexpected base reward of 0");
-      return false;
+    uint64_t height;
+    if (height > 5){
+      if (base_reward == 0)
+      {
+        MERROR("Unexpected base reward of 0");
+        return false;
+      }
     }
-
     if (already_generated_coins == 0)
     {
       result.original_base_reward = result.adjusted_base_reward = result.base_miner = base_reward;
