@@ -146,7 +146,7 @@ namespace cryptonote
         if (hard_fork_version >= 11)
             return SUPER_NODE_BASE_REWARD_DIVISOR_v2;
         else
-            return 2.0; //governance reward was effective lower than planned because of this value      
+            return 25.0; //governance reward was effective lower than planned because of this value      
   }
   
   uint64_t governance_reward_formula(uint64_t base_reward)
