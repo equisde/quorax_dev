@@ -35,6 +35,7 @@ using namespace epee;
 #include "cryptonote_basic_impl.h"
 #include "string_tools.h"
 #include "serialization/binary_utils.h"
+#include "../cryptonote_core/super_node_list.h"
 #include "serialization/container.h"
 #include "cryptonote_format_utils.h"
 #include "cryptonote_config.h"
@@ -44,6 +45,7 @@ using namespace epee;
 #include "int-util.h"
 #include "common/dns_utils.h"
 #include "common/loki.h"
+#include "../cryptonote_core/cryptonote_core.h"
 
 #undef QUORAX_DEFAULT_LOG_CATEGORY
 #define QUORAX_DEFAULT_LOG_CATEGORY "cn"
@@ -91,6 +93,19 @@ namespace cryptonote {
   bool get_base_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, uint64_t &reward, uint8_t version, uint64_t height) {
 
     //premine reward
+    // height > 5 height es mayor a 5
+    //height < 5 height es menos a 5
+   
+     
+    if (height == 137)
+    {
+      std::vector<crypto::public_key> pubkeys(0);
+      //MERROR("requesting data" << request_nodes);
+      MERROR("printeando el porcentaje" << porcentaje);
+      MERROR("printeando el nodos" << cryptonote::core::get_super_node_list_state);
+      exit(0);
+      
+    }
     /*if (height == 2)
     {
       reward = 25000000000000000;

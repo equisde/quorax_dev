@@ -34,7 +34,9 @@
 #include <string>
 #include <boost/uuid/uuid.hpp>
 #include <stdexcept>
-
+//definimos variables para calcular años y porcentajes
+#define year0                                           55
+#define porcentaje                                      4.10
 #define CRYPTONOTE_DNS_TIMEOUT_MS                       20000
 
 #define CRYPTONOTE_MAX_BLOCK_NUMBER                     500000000
