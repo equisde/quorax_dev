@@ -3148,6 +3148,8 @@ bool Blockchain::check_fee(size_t tx_weight, uint64_t fee) const
   {
     median = m_current_block_cumul_weight_limit / 2;
     already_generated_coins = blockchain_height ? m_db->get_block_already_generated_coins(blockchain_height - 1) : 0;
+    
+    
     if (!get_base_block_reward(median, 1, already_generated_coins, base_reward, version, blockchain_height))
       return false;
   }
