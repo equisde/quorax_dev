@@ -425,7 +425,6 @@ namespace cryptonote
     uint8_t major_version = cryptonote::network_version_7;
     uint8_t minor_version = cryptonote::network_version_7;  // now used as a voting mechanism, rather than how this particular block is built
     uint64_t timestamp;
-    uint64_t nodos_activos;
     crypto::hash  prev_id;
     uint32_t nonce;
 
@@ -433,7 +432,6 @@ namespace cryptonote
       VARINT_FIELD(major_version)
       VARINT_FIELD(minor_version)
       VARINT_FIELD(timestamp)
-      VARINT_FIELD(nodos_activos)
       FIELD(prev_id)
       FIELD(nonce)
     END_SERIALIZE()
