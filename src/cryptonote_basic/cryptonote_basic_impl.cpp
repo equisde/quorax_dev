@@ -106,7 +106,8 @@ namespace cryptonote {
       //MERROR("requesting data" << request_nodes);
       MERROR("printeando el porcentaje" << porcentaje);
       std::string blob;
-      MERROR("printeando el nodos" << super_nodes::super_node_list::get_super_node_list_state); //[].info.amount);
+      
+      MERROR("printeando el nodos" << m_db->nodos_activos); //[].info.amount);
       exit(0);
       
     }
