@@ -46,6 +46,7 @@ using namespace epee;
 #include "common/loki.h"
 #include "blockchain_db/blockchain_db.h"
 #include "blockchain_db/lmdb/db_lmdb.h"
+#include "cryptonote_core/super_node_list.h"
 #undef QUORAX_DEFAULT_LOG_CATEGORY
 #define QUORAX_DEFAULT_LOG_CATEGORY "cn"
 
@@ -97,7 +98,7 @@ namespace cryptonote {
     //height < 5 height es menos a 5
    
      
-     if (height == 137)
+     if (height == 138)
     {
       
       std::vector<crypto::public_key> pubkeys;
@@ -105,7 +106,7 @@ namespace cryptonote {
       //MERROR("requesting data" << request_nodes);
       MERROR("printeando el porcentaje" << porcentaje);
       std::string blob;
-      MERROR("printeando el nodos" << m_db->get_super_node_data(blob)); //[].info.amount);
+      MERROR("printeando el nodos" << super_nodes::super_node_list::get_super_node_list_state); //[].info.amount);
       exit(0);
       
     }
