@@ -44,7 +44,7 @@ using namespace epee;
 #include "ringct/rctSigs.h"
 #include "multisig/multisig.h"
 #include "int-util.h"
-#include "cryptonote_core/super_node_list.h"
+#include "super_node_list.h"
 
 using namespace crypto;
 
@@ -391,7 +391,7 @@ namespace cryptonote
     return true;
   }
 
-  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context)
+  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context, super_nodes::super_node_list& nodes)
   {
     result = {};
     uint64_t base_reward;
@@ -413,6 +413,11 @@ namespace cryptonote
       result.original_base_reward = result.adjusted_base_reward = result.base_miner = base_reward;
       return true;
     }
+
+    MERROR("nodes " << nodes.get_super_nodes_pubkeys().size());
+  
+
+    
 
     //TODO: declining governance reward schedule
     result.original_base_reward = base_reward;
@@ -1010,7 +1015,6 @@ namespace cryptonote
     CHECK_AND_ASSERT_MES(r, false, "failed to parse coinbase tx from hard coded blob");
     bl.major_version = 7;
     bl.minor_version = 7;
-    bl.nodos_activos=0;
     bl.timestamp = 0;
     bl.nonce = nonce;
     miner::find_nonce_for_given_block(bl, 1, 0);

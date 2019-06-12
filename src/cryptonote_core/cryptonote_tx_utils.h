@@ -34,6 +34,7 @@
 #include <boost/serialization/utility.hpp>
 #include "ringct/rctOps.h"
 
+
 namespace cryptonote
 {
   //---------------------------------------------------------------
@@ -115,7 +116,7 @@ namespace cryptonote
   // cryptonote_core since it would have a circular dependency on Blockchain
 
   // NOTE: Block reward function that should be called after hard fork v10
-  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context);
+  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context, super_nodes:: nodes);
 
   struct tx_source_entry
   {

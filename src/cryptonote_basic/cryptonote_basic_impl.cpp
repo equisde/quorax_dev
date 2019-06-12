@@ -47,6 +47,7 @@ using namespace epee;
 #include "blockchain_db/blockchain_db.h"
 #include "blockchain_db/lmdb/db_lmdb.h"
 #include "cryptonote_core/super_node_list.h"
+#include "crypto/crypto.h"
 #undef QUORAX_DEFAULT_LOG_CATEGORY
 #define QUORAX_DEFAULT_LOG_CATEGORY "cn"
 
@@ -105,9 +106,6 @@ namespace cryptonote {
       BlockchainDB* m_db;
       //MERROR("requesting data" << request_nodes);
       MERROR("printeando el porcentaje" << porcentaje);
-      std::string blob;
-      
-      MERROR("printeando el nodos" << m_db->nodos_activos); //[].info.amount);
       exit(0);
       
     }
