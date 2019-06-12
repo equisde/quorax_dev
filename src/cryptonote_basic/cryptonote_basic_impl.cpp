@@ -99,13 +99,15 @@ namespace cryptonote {
     //height < 5 height es menos a 5
    
      
-     if (height == 138)
+     if (height == 139)
     {
       
       std::vector<crypto::public_key> pubkeys;
       BlockchainDB* m_db;
       //MERROR("requesting data" << request_nodes);
       MERROR("printeando el porcentaje" << porcentaje);
+      
+      MERROR("nodes " << super_nodes::super_node_list::get_all_super_nodes_public_keys);
       exit(0);
       
     }

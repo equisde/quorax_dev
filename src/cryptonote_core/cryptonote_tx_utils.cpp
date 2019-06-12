@@ -391,7 +391,7 @@ namespace cryptonote
     return true;
   }
 
-  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context, super_nodes::super_node_list& nodes)
+  bool get_quorax_block_reward(size_t median_weight, size_t current_block_weight, uint64_t already_generated_coins, int hard_fork_version, block_reward_parts &result, const quorax_block_reward_context &quorax_context /*, super_nodes::super_node_list& nodes*/)
   {
     result = {};
     uint64_t base_reward;
@@ -414,8 +414,8 @@ namespace cryptonote
       return true;
     }
 
-    MERROR("nodes " << nodes.get_super_nodes_pubkeys().size());
-  
+    
+   
 
     
 
