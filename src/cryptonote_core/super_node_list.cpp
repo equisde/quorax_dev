@@ -1589,7 +1589,7 @@ namespace super_nodes
     return true;
   }
 
-  static void super_node_list::get_all_super_nodes_public_keys(std::vector<crypto::public_key>& keys, bool fully_funded_nodes_only) const
+  void super_node_list::get_all_super_nodes_public_keys(std::vector<crypto::public_key>& keys, bool fully_funded_nodes_only) const
   {
     keys.clear();
     keys.resize(m_transient_state.super_nodes_infos.size());

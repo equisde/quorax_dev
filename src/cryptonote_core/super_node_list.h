@@ -198,7 +198,7 @@ namespace super_nodes
     void set_my_super_node_keys(crypto::public_key const *pub_key);
     bool store();
 
-    void get_all_super_nodes_public_keys(std::vector<crypto::public_key>& keys, bool fully_funded_nodes_only) const;
+    static void get_all_super_nodes_public_keys(std::vector<crypto::public_key>& keys, bool fully_funded_nodes_only) const;
 
     struct rollback_event
     {
